@@ -2,17 +2,14 @@ package org.DSA;
 
 public class FindPrime {
 
-    static boolean isPrime(int num) {
-        int count = 0;
-        for (int i = 1; i * i <= num; i++) {
-            if (num % i == 0) {
-                count += 1;
-            }
+    static int isPrime(int num) {
+        if (num == 1) return 0;
+        for (long i = 2; i * i <= num; i++) {
+            if (num % i == 0) return 0;
         }
-        return count == 1;
+        return 1;
     }
 
-    ;
 
     public static void main(String[] args) {
         System.out.println(isPrime(127));

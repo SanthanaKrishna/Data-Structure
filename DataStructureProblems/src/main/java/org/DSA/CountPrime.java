@@ -16,11 +16,11 @@ public class CountPrime {
     }
 
     public static void main(String[] args) {
+        int num=127;
         int result=0;
-        for (int i = 1; i <= 2; i++) {
+        for (int i = 1; i <= num; i++) {
             if (factor(i) == 2) {
                 result++;
-                System.out.println(i);
             }
         }
         System.out.println(result);
