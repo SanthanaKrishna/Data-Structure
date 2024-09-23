@@ -97,11 +97,94 @@ Second argument is an integer B.
 
 **Input 2:** `A = [1,2,4] B = 4` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `0`
 
-**Input 2:** `A = [1,2,2] B = 4` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `1`
+**Input 3:** `A = [1,2,2] B = 4` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 3:** `1`
 #### Example Explanation
 ***Explanation 1:*** `(i,j) = (3,4)`
 
 ***Explanation 2:*** `No pair has sum equal to 4.`
 
-***Explanation 1:*** ` (i,j) = (2,3)`
+***Explanation 3:*** ` (i,j) = (2,3)`
+</details>
+
+### 5. Reverse in a range
+<details>
+<summary>ReverseArrayInRange</summary>
+
+#### Problem Description
+```
+Given an array A of N integers and also given two integers B and C. 
+Reverse the elements of the array A within the given inclusive range [B, C].
+```
+#### Problem Constraints
+- 1 <= N <= 10<sup>5</sup>
+- 1 <= A[i] <= 10<sup>9</sup>
+- 0 <= B <= C <= N - 1
+#### Input Format :
+```
+The first argument A is an array of integer.
+The second and third arguments are integers B and C
+```
+#### Output Format : `Return the array A after reversing in the given range.`
+#### Examples :
+**Input 1:** `A = [1,2,3,4] B = 2 C = 3`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `[1, 2, 4, 3]`
+
+**Input 2:** `A = [2, 5, 6] B = 0  C = 2` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `[6, 5, 2]`
+
+#### Example Explanation
+***Explanation 1:*** `We reverse the subarray [3, 4].`
+
+***Explanation 2:*** `We reverse the entire array [2, 5, 6].`
+</details>
+
+### 6. Array Rotation
+<details>
+<summary>ReverseArrayInRange</summary>
+
+#### Problem Description
+```
+Given an integer array A of size N and an integer B, you have to return the same array after rotating it B times towards the right.
+```
+#### Problem Constraints
+- 1 <= N <= 10<sup>5</sup>
+- 1 <= A[i] <= 10<sup>9</sup>
+- 0 <= B <= C <= N - 1
+#### Input Format :
+```
+The first argument A is an array of integer.
+The second and third arguments are integers B and C
+```
+#### Output Format : `Return the array A after reversing in the given range.`
+#### Examples :
+**Input 1:** `A = [1,2,3,4] B = 2 C = 3`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `[1, 2, 4, 3]`
+
+**Input 2:** `A = [2, 5, 6] B = 0  C = 2` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `[6, 5, 2]`
+
+#### Example Explanation
+***Explanation 1:*** `We reverse the subarray [3, 4].`
+
+***Explanation 2:*** `We reverse the entire array [2, 5, 6].`
+</details>
+
+### 7. Max Min of an Array
+<details>
+<summary>MinMaxSumArray</summary>
+
+#### Problem Description
+```
+Given an array A of size N. You need to find the sum of Maximum and Minimum element in the given array.
+```
+#### Problem Constraints
+- 1 <= N <= 10<sup>5</sup>
+- 10<sup>9</sup> <= A[i] <= 10<sup>9</sup>
+#### Input Format : `First argument A is an integer array.`
+#### Output Format : `Return the sum of maximum and minimum element of the array.`
+#### Examples :
+**Input 1:** `A = [-2, 1, -4, 5, 3] `  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `1`
+
+**Input 2:** `A = [1, 3, 4, 1]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `5`
+
+#### Example Explanation
+***Explanation 1:*** `Maximum Element is 5 and Minimum element is -4. (5 + (-4)) = 1. `
+
+***Explanation 2:*** `Maximum Element is 4 and Minimum element is 1. (4 + 1) = 5.`
 </details>
