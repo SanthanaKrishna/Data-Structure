@@ -1,4 +1,4 @@
-package org.example;
+package org.DSA;
 
 public class KthSmallestElement {
     static int kthSmallest(final int[] A, int B) {

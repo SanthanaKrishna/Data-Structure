@@ -1,4 +1,4 @@
-package org.example;
+package org.DSA;
 
 public class CountPrime {
     static int factor(int n) {

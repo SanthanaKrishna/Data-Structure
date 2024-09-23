@@ -1,12 +1,12 @@
-package org.example;
+package org.DSA;
 
 import java.util.Arrays;
 
 public class AntiDiagnol {
     static int[][] antiDiagonal(int[][] arr) {
         int n = arr.length;
-        int rowLen = arr.length, colLen = arr[0].length;
-        int arraySize = colLen - rowLen - 1;
+//        int rowLen = arr.length, colLen = arr[0].length;
+//        int arraySize = colLen - rowLen - 1;
         int[][] result = new int[2 * n - 1][n];
 
         for (int col = 0; col < n; col++) {

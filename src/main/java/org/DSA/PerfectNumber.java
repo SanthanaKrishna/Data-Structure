@@ -1,4 +1,4 @@
-package org.example;
+package org.DSA;
 
 public class PerfectNumber {
 //    public static int solve(int A) {
