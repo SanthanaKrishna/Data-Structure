@@ -14,11 +14,9 @@ public class GenerateAllSubArray {
             for (int j = i; j < n; j++) {
                 int subArraySize = j - i + 1;
                 result[index] = new int[subArraySize];
-
                 for (int k = 0; k < subArraySize; k++) {
                     result[index][k] = arr[i + k];
                 }
-
                 index++;
             }
         }

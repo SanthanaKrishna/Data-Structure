@@ -1,6 +1,16 @@
 # Data-Structure
 ## Basic Problems Solving
-### 1. Count Factors - 2
+#### Sum of N natural numbers
+##### Formula
+```
+As the first n natural numbers are 1,2,3,4,5,6,.........n
+
+They form an AP with a=1 and d=1
+The sum of AP for n numbers = ((2*a + (n-1)*d)*n)/2
+=((2 + n - 1)*n)/2
+=(n*(n+1))/2
+```
+### 1.1 Count Factors - 2
 <details>
 <summary>Factors</summary>
 
@@ -24,7 +34,7 @@ Example : 1, 2, 3, 6 are factors of 6
 ***Explanation 2:*** `Factors of 10 are 1, 2, 5, and 10.`
 </details>
 
-### 2. IsPrime
+### 1.2 IsPrime
 <details>
 <summary>IsPrime and CountPrime</summary>
 
@@ -49,7 +59,7 @@ The value of A can cross the range of Integer.
 ***Explanation 2:*** `10 is not a prime number.`
 </details>
 
-### 3. Find Perfect Numbers
+### 1.3 Find Perfect Numbers
 <details>
 <summary>Perfect Number</summary>
 
@@ -73,7 +83,8 @@ A <bold>proper divisor</bold> of a natural number is the divisor that is strictl
 ***Explanation 2:*** `For A = 6, the sum of its proper divisors = 1 + 2 + 3 = 6, is equal to 6.`
 </details>
 
-### 4. Good Pair
+## Array Basics
+### 2.1 Good Pair
 <details>
 <summary>Good Pair</summary>
 
@@ -106,7 +117,7 @@ Second argument is an integer B.
 ***Explanation 3:*** ` (i,j) = (2,3)`
 </details>
 
-### 5. Reverse in a range
+### 2.2 Reverse in a range
 <details>
 <summary>ReverseArrayInRange</summary>
 
@@ -136,9 +147,9 @@ The second and third arguments are integers B and C
 ***Explanation 2:*** `We reverse the entire array [2, 5, 6].`
 </details>
 
-### 6. Array Rotation
+### 2.3 Array Rotation K Times
 <details>
-<summary>ReverseArrayInRange</summary>
+<summary>RotateArrayKTimes</summary>
 
 #### Problem Description
 ```
@@ -147,25 +158,25 @@ Given an integer array A of size N and an integer B, you have to return the same
 #### Problem Constraints
 - 1 <= N <= 10<sup>5</sup>
 - 1 <= A[i] <= 10<sup>9</sup>
-- 0 <= B <= C <= N - 1
+- 1 <= B <= 10<sup>9</sup>
 #### Input Format :
 ```
-The first argument A is an array of integer.
-The second and third arguments are integers B and C
+The first argument given is the integer array A.
+The second argument given is the integer B.
 ```
-#### Output Format : `Return the array A after reversing in the given range.`
+#### Output Format : `Return the array A after rotating it B times to the right.`
 #### Examples :
-**Input 1:** `A = [1,2,3,4] B = 2 C = 3`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `[1, 2, 4, 3]`
+**Input 1:** `A = [1, 2, 3, 4] B = 2`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `[3, 4, 1, 2]`
 
-**Input 2:** `A = [2, 5, 6] B = 0  C = 2` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `[6, 5, 2]`
+**Input 2:** `A = [2, 5, 6] B = 1` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `[6, 5, 2]`
 
 #### Example Explanation
-***Explanation 1:*** `We reverse the subarray [3, 4].`
+***Explanation 1:*** `Rotate towards the right 2 times - [1, 2, 3, 4] => [4, 1, 2, 3] => [3, 4, 1, 2].`
 
-***Explanation 2:*** `We reverse the entire array [2, 5, 6].`
+***Explanation 2:*** `Rotate towards the right 1 time - [2, 5, 6] => [6, 2, 5].`
 </details>
 
-### 7. Max Min of an Array
+### 2.4 Max Min of an Array
 <details>
 <summary>MinMaxSumArray</summary>
 
@@ -187,4 +198,302 @@ Given an array A of size N. You need to find the sum of Maximum and Minimum elem
 ***Explanation 1:*** `Maximum Element is 5 and Minimum element is -4. (5 + (-4)) = 1. `
 
 ***Explanation 2:*** `Maximum Element is 4 and Minimum element is 1. (4 + 1) = 5.`
+</details>
+
+## Array - Prefix Sum
+#### Prefix Sum Formula
+###### Formula
+```
+PrefSum[i] = prefSum[i - 1] + A[i]
+```
+### 3.1 Range Sum Query
+<details>
+<summary>PrefixSumRangeQuery</summary>
+
+#### Problem Description
+```
+You are given an integer array A of length N.
+You are also given a 2D integer array B with dimensions M x 2, where each row denotes a [L, R] query.
+For each query, you have to find the sum of all elements from L to R indices in A (0 - indexed).
+More formally, find A[L] + A[L + 1] + A[L + 2] +... + A[R - 1] + A[R] for each query.
+```
+#### Problem Constraints
+- 1 <= N, M <= 10<sup>5</sup> 
+- 1 <= A[i] <= 10<sup>9</sup>
+- 0 <= L <= R < N
+#### Input Format : 
+```
+The first argument is the integer array A.
+The second argument is the 2D integer array B.
+```
+#### Output Format : `Return an integer array of length M where ith element is the answer for ith query in B.`
+#### Examples :
+**Input 1:** `A = [1, 2, 3, 4, 5] B = [[0, 3], [1, 2]]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `[10, 5]`
+
+**Input 2:** `A = [2, 2, 2] B = [[0, 0], [1, 2]]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `[2, 4]`
+
+#### Example Explanation
+***Explanation 1:*** 
+```
+The sum of all elements of A[0 ... 3] = 1 + 2 + 3 + 4 = 10.
+The sum of all elements of A[1 ... 2] = 2 + 3 = 5.
+```
+
+***Explanation 2:*** 
+```
+The sum of all elements of A[0 ... 0] = 2 = 2.
+The sum of all elements of A[1 ... 2] = 2 + 2 = 4.
+```
+</details>
+
+### 3.2 Special Index - Prefix Sum Even and Odd
+<details>
+<summary>PrefixSumSpecialIndex</summary>
+
+#### Problem Description
+```
+You are given an integer array A of length N.
+You are also given a 2D integer array B with dimensions M x 2, where each row denotes a [L, R] query.
+For each query, you have to find the sum of all elements from L to R indices in A (0 - indexed).
+More formally, find A[L] + A[L + 1] + A[L + 2] +... + A[R - 1] + A[R] for each query.
+```
+#### Problem Constraints
+- 1 <= N, M <= 10<sup>5</sup>
+- 1 <= A[i] <= 10<sup>9</sup>
+- 0 <= L <= R < N
+#### Input Format :
+```
+The first argument is the integer array A.
+The second argument is the 2D integer array B.
+```
+#### Output Format : `Return an integer array of length M where ith element is the answer for ith query in B.`
+#### Examples :
+**Input 1:** `A = [1, 2, 3, 4, 5] B = [[0, 3], [1, 2]]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `[10, 5]`
+
+**Input 2:** `A = [2, 2, 2] B = [[0, 0], [1, 2]]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `[2, 4]`
+
+#### Example Explanation
+***Explanation 1:***
+```
+The sum of all elements of A[0 ... 3] = 1 + 2 + 3 + 4 = 10.
+The sum of all elements of A[1 ... 2] = 2 + 3 = 5.
+```
+
+***Explanation 2:***
+```
+The sum of all elements of A[0 ... 0] = 2 = 2.
+The sum of all elements of A[1 ... 2] = 2 + 2 = 4.
+```
+</details>
+
+## Array - Carry Forward & SubArrays
+#### Total SubArray Formula
+###### Formula
+```
+Total SubArrays = N(N+1)/2
+```
+### 4.1 Special Subsequences "AG" - 2
+<details>
+<summary>SpecialSubSequences</summary>
+
+#### Problem Description
+```
+You have given a string A having Uppercase English letters.
+You have to find the number of pairs (i, j) such that A[i] = 'A', A[j] = 'G' and i < j.
+```
+#### Problem Constraints
+- 1 <= length(A) <= 10<sup>5</sup>
+#### Input Format : `First and only argument is a string A.`
+#### Output Format : `Return an long integer denoting the answer.`
+#### Examples :
+**Input 1:** ` A = "ABCGAG"`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `3`
+
+**Input 2:** `A = "GAB"` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `0`
+
+#### Example Explanation
+***Explanation 1:*** ` Subsequence "AG" is 3 times in given string, the pairs are (0, 3), (0, 5) and (4, 5). `
+
+***Explanation 2:*** ` There is no subsequence "AG" in the given string.`
+</details>
+
+### 4.2 Generate all subarrays
+<details>
+<summary>GenerateAllSubArray</summary>
+
+#### Problem Description
+```
+You are given an array A of N integers.
+Return a 2D array consisting of all the subarrays of the array
+Note : The order of the subarrays in the resulting 2D array does not matter.
+```
+#### Problem Constraints
+- 1 <= lA[i] <= 10<sup>5</sup>
+- 1 <= N <= 100
+#### Input Format : `First argument A is an array of integers.`
+#### Output Format : `Return a 2D array of integers in any order.`
+#### Examples :
+**Input 1:** `A = [1, 2, 3]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `[[1], [1, 2], [1, 2, 3], [2], [2, 3], [3]]`
+
+**Input 2:** `A = [5, 2, 1, 4]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `[[1 ], [1 4 ], [2 ], [2 1 ], [2 1 4 ], [4 ], [5 ], [5 2 ], [5 2 1 ], [5 2 1 4 ] ]`
+
+#### Example Explanation
+***Explanation 1:*** `All the subarrays of the array are returned. There are a total of 6 subarrays.`
+
+***Explanation 2:*** `All the subarrays of the array are returned. There are a total of 10 subarrays.`
+</details>
+
+### 4.3  SubArray in given range
+<details>
+<summary>SubArrayInRange</summary>
+
+#### Problem Description
+```
+Given an array A of length N, return the subarray from B to C.
+```
+#### Problem Constraints
+- 1 <= lA[i] <= 10<sup>5</sup>
+- 1 <= A[i] <= 10<sup>9</sup>
+- 0 <= B <= C < N
+#### Input Format : 
+```
+The first argument A is an array of integers
+The remaining argument B and C are integers.
+```
+#### Output Format : `Return a subarray.`
+#### Examples :
+**Input 1:** `A = [4, 3, 2, 6] B = 1  C = 3`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `[3, 2, 6]`
+
+**Input 2:** `A = [4, 2, 2] B = 0  C = 1` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `[4, 2]`
+
+#### Example Explanation
+***Explanation 1:*** `The subarray of A from 1 to 3 is [3, 2, 6].`
+
+***Explanation 2:*** `The subarray of A from 0 to 1 is [4, 2].`
+</details>
+
+### 4.4  Closest MinMax SubArray
+<details>
+<summary>ClosestMinMaxSmallestSubArray</summary>
+
+#### Problem Description
+```
+Given an array A, find the size of the smallest subarray such that it contains at least one occurrence of the maximum value of the array and at least one occurrence of the minimum value of the array.
+```
+#### Problem Constraints
+- 1 <= |A| <= 2000 
+#### Input Format : `First and only argument is vector A.`
+#### Output Format : `Return the length of the smallest subarray which has at least one occurrence of minimum and maximum element of the array.`
+#### Examples :
+**Input 1:** `A = [1, 3, 2]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `2`
+
+**Input 2:** `A = [2, 6, 1, 6, 9]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `3`
+
+#### Example Explanation
+***Explanation 1:*** `Take the 1st and 2nd elements as they are the minimum and maximum elements respectievly.`
+
+***Explanation 2:*** `Take the last 3 elements of the array.`
+</details>
+
+
+## Array - Sliding Window & Contribution Technique
+### 5.1 Sum of All SubArrays
+<details>
+<summary>SumAllSubArrays</summary>
+
+#### Problem Description
+```
+You are given an integer array A of length N.
+You have to find the sum of all subarray sums of A.
+More formally, a subarray is defined as a contiguous part of an array which we can obtain by deleting zero or more elements from either end of the array.
+A subarray sum denotes the sum of all the elements of that subarray.
+Note : Be careful of integer overflow issues while calculations. Use appropriate datatypes.
+```
+#### Problem Constraints
+- 1 <= N <= 10<sup>5</sup>
+- 1 <= Ai <= 10<sup>4</sup>
+#### Input Format : `The first argument is the integer array A.`
+#### Output Format : `Return a single integer denoting the sum of all subarray sums of the given array.`
+#### Examples :
+**Input 1:** `A = [1, 2, 3]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `19`
+
+**Input 2:** `A = [2, 1, 3]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `20`
+
+#### Example Explanation
+***Explanation 1:*** 
+```
+The different subarrays for the given array are: [1], [2], [3], [1, 2], [2, 3], [1, 2, 3].
+Their sums are: 1 + 2 + 3 + 3 + 5 + 6 = 20
+```
+
+***Explanation 2:***
+```
+The different subarrays for the given array are: [2], [1], [3], [2, 1], [1, 3], [2, 1, 3].
+Their sums are: 2 + 1 + 3 + 3 + 4 + 6 = 19
+```
+</details>
+
+### 5.2 Maximum SubArray Easy
+<details>
+<summary>MaximumSubArray</summary>
+
+#### Problem Description
+```
+You are given an integer array C of size A. Now you need to find a subarray (contiguous elements) so that the sum of contiguous elements is maximum.
+But the sum must not exceed B.
+```
+#### Problem Constraints
+- 1 <= A <= 10<sup>3</sup>
+- 1 <= B <= 10<sup>9</sup>
+- 1 <= C[i] <= 10<sup>6</sup>
+#### Input Format : 
+```
+The first argument is the integer A.
+The second argument is the integer B.
+The third argument is the integer array C.
+```
+#### Output Format : `Return a single integer which denotes the maximum sum.`
+#### Examples :
+**Input 1:** `A = 5 B = 12 C = [2, 1, 3, 4, 5]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `12`
+
+**Input 2:** `A = 3 B = 1 C = [2, 2, 2]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `0`
+
+#### Example Explanation
+***Explanation 1:*** ```We can select {3,4,5} which sums up to 12 which is the maximum possible sum.```
+
+***Explanation 2:***
+```
+All elements are greater than B, which means we cannot select any subarray.
+Hence, the answer is 0.
+```
+</details>
+    
+### 5.3 SubArray with given sum and length
+<details>
+<summary>SubArrayGivenSumLength</summary>
+
+#### Problem Description
+```
+Given an array A of length N. Also given are integers B and C.
+Return 1 if there exists a subarray with length B having sum C and 0 otherwise
+```
+#### Problem Constraints
+- 1 <= N <= 10<sup>5</sup>
+- 1 <= A[i] <= 10<sup>4</sup>
+- 1 <= B <= N
+- 1 <= C <= 10<sup>9</sup>
+#### Input Format :
+```
+First argument A is an array of integers.
+The remaining arguments B and C are integers
+```
+#### Output Format : `Return 1 if such a subarray exist and 0 otherwise.`
+#### Examples :
+**Input 1:** `A = [4, 3, 2, 6, 1] B = 3 C = 11`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `1`
+
+**Input 2:** `A = [4, 2, 2, 5, 1] B = 4 C = 6` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `0`
+
+#### Example Explanation
+***Explanation 1:***  `The subarray [3, 2, 6] is of length 3 and sum 11.`
+
+***Explanation 2:*** `There are no such subarray.`
 </details>
