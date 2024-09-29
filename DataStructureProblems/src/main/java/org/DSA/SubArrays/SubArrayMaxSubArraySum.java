@@ -1,4 +1,4 @@
-package org.DSA;
+package org.DSA.SubArrays;
 
 /** Max Sum Contiguous Subarray
  * Given arr[N]. Find the maximum subArray sum out of all subArrays.

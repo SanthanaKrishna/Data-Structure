@@ -394,6 +394,7 @@ Given an array A, find the size of the smallest subarray such that it contains a
 ***Explanation 2:*** `Take the last 3 elements of the array.`
 </details>
 
+---
 
 ## Array - Sliding Window & Contribution Technique
 ### 5.1 Sum of All SubArrays
@@ -496,4 +497,212 @@ The remaining arguments B and C are integers
 ***Explanation 1:***  `The subarray [3, 2, 6] is of length 3 and sum 11.`
 
 ***Explanation 2:*** `There are no such subarray.`
+</details>
+
+---
+
+## Array - Sorting
+### 6.1 --- Sum of All SubArrays
+<details>
+<summary>SumAllSubArrays</summary>
+
+#### Problem Description
+```
+You are given an integer array A of length N.
+You have to find the sum of all subarray sums of A.
+More formally, a subarray is defined as a contiguous part of an array which we can obtain by deleting zero or more elements from either end of the array.
+A subarray sum denotes the sum of all the elements of that subarray.
+Note : Be careful of integer overflow issues while calculations. Use appropriate datatypes.
+```
+#### Problem Constraints
+- 1 <= N <= 10<sup>5</sup>
+- 1 <= Ai <= 10<sup>4</sup>
+#### Input Format : `The first argument is the integer array A.`
+#### Output Format : `Return a single integer denoting the sum of all subarray sums of the given array.`
+#### Examples :
+**Input 1:** `A = [1, 2, 3]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `19`
+
+**Input 2:** `A = [2, 1, 3]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `20`
+
+#### Example Explanation
+***Explanation 1:***
+```
+The different subarrays for the given array are: [1], [2], [3], [1, 2], [2, 3], [1, 2, 3].
+Their sums are: 1 + 2 + 3 + 3 + 5 + 6 = 20
+```
+
+***Explanation 2:***
+```
+The different subarrays for the given array are: [2], [1], [3], [2, 1], [1, 3], [2, 1, 3].
+Their sums are: 2 + 1 + 3 + 3 + 4 + 6 = 19
+```
+</details>
+
+---
+
+## Bit Manipulations 
+### 7.1 ---0 Sum of All SubArrays
+<details>
+<summary>SumAllSubArrays</summary>
+
+#### Problem Description
+```
+You are given an integer array A of length N.
+You have to find the sum of all subarray sums of A.
+More formally, a subarray is defined as a contiguous part of an array which we can obtain by deleting zero or more elements from either end of the array.
+A subarray sum denotes the sum of all the elements of that subarray.
+Note : Be careful of integer overflow issues while calculations. Use appropriate datatypes.
+```
+#### Problem Constraints
+- 1 <= N <= 10<sup>5</sup>
+- 1 <= Ai <= 10<sup>4</sup>
+#### Input Format : `The first argument is the integer array A.`
+#### Output Format : `Return a single integer denoting the sum of all subarray sums of the given array.`
+#### Examples :
+**Input 1:** `A = [1, 2, 3]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `19`
+
+**Input 2:** `A = [2, 1, 3]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `20`
+
+#### Example Explanation
+***Explanation 1:***
+```
+The different subarrays for the given array are: [1], [2], [3], [1, 2], [2, 3], [1, 2, 3].
+Their sums are: 1 + 2 + 3 + 3 + 5 + 6 = 20
+```
+
+***Explanation 2:***
+```
+The different subarrays for the given array are: [2], [1], [3], [2, 1], [1, 3], [2, 1, 3].
+Their sums are: 2 + 1 + 3 + 3 + 4 + 6 = 19
+```
+</details>
+
+---
+
+## String
+### 8.1 Sum of All SubArrays
+<details>
+<summary>SumAllSubArrays</summary>
+
+#### Problem Description
+```
+You are given an integer array A of length N.
+You have to find the sum of all subarray sums of A.
+More formally, a subarray is defined as a contiguous part of an array which we can obtain by deleting zero or more elements from either end of the array.
+A subarray sum denotes the sum of all the elements of that subarray.
+Note : Be careful of integer overflow issues while calculations. Use appropriate datatypes.
+```
+#### Problem Constraints
+- 1 <= N <= 10<sup>5</sup>
+- 1 <= Ai <= 10<sup>4</sup>
+#### Input Format : `The first argument is the integer array A.`
+#### Output Format : `Return a single integer denoting the sum of all subarray sums of the given array.`
+#### Examples :
+**Input 1:** `A = [1, 2, 3]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `19`
+
+**Input 2:** `A = [2, 1, 3]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `20`
+
+#### Example Explanation
+***Explanation 1:***
+```
+The different subarrays for the given array are: [1], [2], [3], [1, 2], [2, 3], [1, 2, 3].
+Their sums are: 1 + 2 + 3 + 3 + 5 + 6 = 20
+```
+
+***Explanation 2:***
+```
+The different subarrays for the given array are: [2], [1], [3], [2, 1], [1, 3], [2, 1, 3].
+Their sums are: 2 + 1 + 3 + 3 + 4 + 6 = 19
+```
+</details>
+
+---
+
+## Arrays 2: Two Dimensional
+### 10.1 Search in a row wise and column wise sorted matrix
+<details>
+<summary>Matrix - FindValueInMatrix</summary>
+
+#### Problem Description
+```
+Given a matrix of integers A of size N x M and an integer B.
+
+In the given matrix every row and column is sorted in non-decreasing order. Find and return the position of B in the matrix in the given form:
+If A[i][j] = B then return (i * 1009 + j)
+If B is not present return -1.
+
+Note 1: Rows are numbered from top to bottom and columns are numbered from left to right.
+Note 2: If there are multiple B in A then return the smallest value of i*1009 +j such that A[i][j]=B.
+Note 3: Expected time complexity is linear
+Note 4: Use 1-based indexing
+```
+#### Problem Constraints
+- 1 <= N, M <= 1000 
+- 100000 <= A[i] <= 100000 
+- 100000 <= B <= 100000
+#### Input Format : 
+```
+The first argument given is the integer matrix A.
+The second argument given is the integer B.
+```
+#### Output Format : `Return the position of B and if it is not present in A return -1 instead.`
+#### Examples :
+**Input 1:** `A = [[1, 2, 3] [4, 5, 6] [7, 8, 9]]  B = 2`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `1011`
+
+**Input 2:** `A = [[1, 2] [3, 3]]  B = 3` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `2019`
+
+#### Example Explanation
+***Explanation 1:***
+```
+A[1][2] = 2
+1 * 1009 + 2 = 1011
+```
+
+***Explanation 2:***
+```
+A[2][1] = 3
+2 * 1009 + 1 = 2019
+A[2][2] = 3
+2 * 1009 + 2 = 2020
+The minimum value is 2019
+```
+</details>
+
+---
+
+### 10.2 Spiral Order Matrix II
+<details>
+<summary>Matrix - SpiralOrderMatrix</summary>
+
+#### Problem Description
+```
+Given an integer A, generate a square matrix filled with elements from 1 to A2 in spiral order and return the generated square matrix.
+```
+#### Problem Constraints
+- 1 <= A <= 1000
+#### Input Format :`First and only argument is integer A`
+#### Output Format : `Return a 2-D matrix which consists of the elements added in spiral order.`
+#### Examples :
+**Input 1:** `A = 1  B = 2`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `[[1]]`
+
+**Input 2:** `A = 2  B = 3` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `[ [1, 2], [4, 3] ]`
+
+**Input 2:** `A = 5  B = 3` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `[ [1,   2,  3,  4, 5],[16, 17, 18, 19, 6],[15, 24, 25, 20, 7],[14, 23, 22, 21, 8],[13, 12, 11, 10, 9] ]`
+
+#### Example Explanation
+***Explanation 1:***
+```
+Only 1 is to be arranged.
+```
+
+***Explanation 2:***
+```
+1 --> 2
+      |
+      |
+4<--- 3
+```
+
+***Explanation 3:***
+```![img.png](img.png)```
 </details>

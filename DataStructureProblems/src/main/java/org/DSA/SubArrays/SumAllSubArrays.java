@@ -1,4 +1,4 @@
-package org.DSA;
+package org.DSA.SubArrays;
 
 public class SumAllSubArrays {
 //    public long subarraySum(int[] A) {

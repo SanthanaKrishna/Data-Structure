@@ -1,4 +1,4 @@
-package org.DSA;
+package org.DSA.SubArrays;
 
 public class SubArrayGivenSumLength {
     static int sumArraySum(int[] A, int B, int C) {
