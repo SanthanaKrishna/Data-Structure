@@ -1,4 +1,4 @@
-package org.DSA;
+package org.DSA.SubArrays;
 
 public class MaximumSubArray {
     //    public int maxSubarray(int A, int B, int[] C) {

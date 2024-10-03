@@ -5,7 +5,7 @@ import java.util.*;
 public class PrintBoundaryElementsSpiralMatrix {
 
     static ArrayList<Integer> findBoundaryElement(int[][] arr, int n, int m, int i, int j) {
-        ArrayList<Integer> boundaryArr = new ArrayList<Integer>();
+        ArrayList<Integer> boundaryArr = new ArrayList<>();
         for (int k = 0; k < m; k++) {
             boundaryArr.add(arr[i][j]);
             j++;

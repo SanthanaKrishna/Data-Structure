@@ -252,37 +252,35 @@ The sum of all elements of A[1 ... 2] = 2 + 2 = 4.
 
 #### Problem Description
 ```
-You are given an integer array A of length N.
-You are also given a 2D integer array B with dimensions M x 2, where each row denotes a [L, R] query.
-For each query, you have to find the sum of all elements from L to R indices in A (0 - indexed).
-More formally, find A[L] + A[L + 1] + A[L + 2] +... + A[R - 1] + A[R] for each query.
+Given an array, arr[] of size N, the task is to find the count of array indices such that removing an element from these indices makes the sum of even-indexed and odd-indexed array elements equal.
 ```
 #### Problem Constraints
-- 1 <= N, M <= 10<sup>5</sup>
-- 1 <= A[i] <= 10<sup>9</sup>
-- 0 <= L <= R < N
+- 1 <= N <= 10<sup>5</sup>
+- 10<sup>5</sup> <= A[i] <= 10<sup>5</sup>
+- Sum of all elements of A <= 109
 #### Input Format :
 ```
-The first argument is the integer array A.
-The second argument is the 2D integer array B.
+First argument contains an array A of integers of size N
 ```
-#### Output Format : `Return an integer array of length M where ith element is the answer for ith query in B.`
+#### Output Format : `Return the count of array indices such that removing an element from these indices makes the sum of even-indexed and odd-indexed array elements equal.`
 #### Examples :
-**Input 1:** `A = [1, 2, 3, 4, 5] B = [[0, 3], [1, 2]]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `[10, 5]`
+**Input 1:** `A = A = [2, 1, 6, 4]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `1`
 
-**Input 2:** `A = [2, 2, 2] B = [[0, 0], [1, 2]]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `[2, 4]`
+**Input 2:** `A = [1, 1, 1]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `3`
 
 #### Example Explanation
 ***Explanation 1:***
 ```
-The sum of all elements of A[0 ... 3] = 1 + 2 + 3 + 4 = 10.
-The sum of all elements of A[1 ... 2] = 2 + 3 = 5.
+Removing arr[1] from the array modifies arr[] to { 2, 6, 4 } such that, arr[0] + arr[2] = arr[1]. 
+Therefore, the required output is 1.
 ```
 
 ***Explanation 2:***
 ```
-The sum of all elements of A[0 ... 0] = 2 = 2.
-The sum of all elements of A[1 ... 2] = 2 + 2 = 4.
+Removing arr[0] from the given array modifies arr[] to { 1, 1 } such that arr[0] = arr[1] 
+Removing arr[1] from the given array modifies arr[] to { 1, 1 } such that arr[0] = arr[1] 
+Removing arr[2] from the given array modifies arr[] to { 1, 1 } such that arr[0] = arr[1] 
+Therefore, the required output is 3.
 ```
 </details>
 
@@ -316,9 +314,9 @@ You have to find the number of pairs (i, j) such that A[i] = 'A', A[j] = 'G' and
 ***Explanation 2:*** ` There is no subsequence "AG" in the given string.`
 </details>
 
-### 4.2 Generate all subarrays
+### 4.2 Generate all subArrays
 <details>
-<summary>GenerateAllSubArray</summary>
+<summary>SubArrays - GenerateAllSubArray</summary>
 
 #### Problem Description
 ```
@@ -344,7 +342,7 @@ Note : The order of the subarrays in the resulting 2D array does not matter.
 
 ### 4.3  SubArray in given range
 <details>
-<summary>SubArrayInRange</summary>
+<summary>SubArrays - SubArrayInRange</summary>
 
 #### Problem Description
 ```
@@ -373,11 +371,12 @@ The remaining argument B and C are integers.
 
 ### 4.4  Closest MinMax SubArray
 <details>
-<summary>ClosestMinMaxSmallestSubArray</summary>
+<summary>SubArrays - ClosestMinMaxSmallestSubArray</summary>
 
 #### Problem Description
 ```
-Given an array A, find the size of the smallest subarray such that it contains at least one occurrence of the maximum value of the array and at least one occurrence of the minimum value of the array.
+Given an array A, find the size of the smallest subarray such that 
+it contains at least one occurrence of the maximum value of the array and at least one occurrence of the minimum value of the array.
 ```
 #### Problem Constraints
 - 1 <= |A| <= 2000 
@@ -675,9 +674,9 @@ The minimum value is 2019
 <summary>Matrix - SpiralOrderMatrix</summary>
 
 #### Problem Description
-```
-Given an integer A, generate a square matrix filled with elements from 1 to A2 in spiral order and return the generated square matrix.
-```
+`
+Given an integer A, generate a square matrix filled with elements from 1 to A<sub>2</sub> in spiral order and return the generated square matrix.
+`
 #### Problem Constraints
 - 1 <= A <= 1000
 #### Input Format :`First and only argument is integer A`
@@ -705,4 +704,40 @@ Only 1 is to be arranged.
 
 ***Explanation 3:***
 ```![img.png](img.png)```
+</details>
+
+
+### 10.2 Sum of all SubMatrices
+<details>
+<summary>Matrix - SumSubMatrix</summary>
+
+#### Problem Description
+`
+Given a 2D Matrix A of dimensions N*N, we need to return the sum of all possible submatrices.
+`
+#### Problem Constraints
+- 1 <= N <=30 
+- 0 <= A[i][j] <= 10
+#### Input Format :`Single argument representing a 2-D array A of size N x N.`
+#### Output Format : `Return an integer denoting the sum of all possible submatrices in the given matrix.`
+#### Examples :
+**Input 1:** `A = [ [1, 1] [1, 1] ]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `16`
+
+**Input 2:** `A = [ [1, 2] [3, 4] ]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `40`
+
+#### Example Explanation
+***Explanation 1:***
+```
+Number of submatrices with 1 elements = 4, so sum of all such submatrices = 4 * 1 = 4
+Number of submatrices with 2 elements = 4, so sum of all such submatrices = 4 * 2 = 8
+Number of submatrices with 3 elements = 0
+Number of submatrices with 4 elements = 1, so sum of such submatrix = 4
+Total Sum = 4+8+4 = 16
+```
+
+***Explanation 2:***
+```
+The submatrices are [1], [2], [3], [4], [1, 2], [3, 4], [1, 3], [2, 4] and [[1, 2], [3, 4]].
+Total sum = 40
+```
 </details>
