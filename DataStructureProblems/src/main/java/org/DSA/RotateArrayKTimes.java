@@ -2,6 +2,11 @@ package org.DSA;
 
 import java.util.Arrays;
 
+/**
+ * Given an integer array A of size N and an integer B, you have to return the same array after rotating it B times towards the right.
+ * Input 1: A = [1, 2, 3, 4] B = 2  Output 1: [3, 4, 1, 2]
+ * Input 2: A = [2, 5, 6] B = 1  Output 2: [6, 2, 5]
+ */
 public class RotateArrayKTimes {
     static void arrayReverse(int[] Arr, int start, int end) {
         int i = start, j = end;
