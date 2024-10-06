@@ -1,4 +1,4 @@
-package org.DSA;
+package org.DSA.Martix;
 
 import java.util.Arrays;
 
