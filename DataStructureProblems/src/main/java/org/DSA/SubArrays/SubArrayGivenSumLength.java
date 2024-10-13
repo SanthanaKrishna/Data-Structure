@@ -5,6 +5,8 @@ package org.DSA.SubArrays;
  * Return 1 if there exists a subarray with length B having sum C and 0 otherwise
  * Input 1: A = [4, 3, 2, 6, 1] B = 3 C = 11    Output 1: 1
  * Input 2: A = [4, 2, 2, 5, 1] B = 4 C = 6   Output 1: 0
+ * Explanation 1: The subarray [3, 2, 6] is of length 3 and sum 11.
+ * Explanation 2:   There are no such subarray.
  */
 public class SubArrayGivenSumLength {
     static int sumArraySum(int[] A, int B, int C) {

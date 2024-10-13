@@ -6,6 +6,8 @@ package org.DSA.SubArrays;
  * But the sum must not exceed B.
  * Input 1: A = 5 B = 12 C = [2, 1, 3, 4, 5] Output 1: 12
  * Input 2: A = 3 B = 1 C = [2, 2, 2] Output 1: 0
+ * Explanation 1: We can select {3,4,5} which sums up to 12 which is the maximum possible sum.
+ * Explanation 2: All elements are greater than B, which means we cannot select any subarray. Hence, the answer is 0.
  */
 public class MaximumSubArray {
     //    public int maxSubarray(int A, int B, int[] C) {

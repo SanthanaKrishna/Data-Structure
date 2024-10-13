@@ -8,6 +8,10 @@ package org.DSA.Strings;
  * Incase of conflict, return the substring which occurs first ( with the least starting index).
  * Input 1: A = "aaaabaaa"  Output 1: "aaabaaa"
  * Input 2: A = "abba Output 2: "abba"
+ * Explanation 1:
+ * We can see that longest palindromic substring is of length 7 and the string is "aaabaaa".
+ * Explanation 2:
+ * We can see that longest palindromic substring is of length 4 and the string is "abba".
  */
 public class LongestPalindromicSubstring {
 

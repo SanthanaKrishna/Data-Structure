@@ -9,6 +9,10 @@ package org.DSA.Strings;
  * If there are multiple spaces between words, reduce them to a single space in the reversed string.
  * Input 1: A = "the sky is blue"   Output 1: "blue is sky the"
  * Input 2: A = "this is ib"   Output 2: "ib is this"
+ * Explanation 1:
+ * We reverse the string word by word so the string becomes "blue is sky the".
+ * Explanation 2:
+ * We reverse the string word by word so the string becomes "ib is this".
  */
 public class ReverseLine {
     static String reverseString(String str) {

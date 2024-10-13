@@ -719,50 +719,386 @@ The remaining arguments B and C are integers
 
 ## Array - Sorting
 
-### 6.1 Sum of All SubArrays
+### 6.1  Elements Removal
 
 <details>
-<summary>SumAllSubArrays</summary>
+<summary>RemoveElementCost</summary>
 
 #### Problem Description
 
 ```
-You are given an integer array A of length N.
-You have to find the sum of all subarray sums of A.
-More formally, a subarray is defined as a contiguous part of an array which we can obtain by deleting zero or more elements from either end of the array.
-A subarray sum denotes the sum of all the elements of that subarray.
-Note : Be careful of integer overflow issues while calculations. Use appropriate datatypes.
+Given an integer array A of size N. You can remove any element from the array in one operation.
+The cost of this operation is the sum of all elements in the array present before this operation.
+Find the minimum cost to remove all elements from the array.
 ```
 
 #### Problem Constraints
 
-- 1 <= N <= 10<sup>5</sup>
-- 1 <= Ai <= 10<sup>4</sup>
+- 0 <= N <= 1000
+- 1 <= A[i] <= 10<sup>3</sup>
 
-#### Input Format : `The first argument is the integer array A.`
+#### Input Format : `First and only argument is an integer array A.`
 
-#### Output Format : `Return a single integer denoting the sum of all subarray sums of the given array.`
+#### Output Format : `Return an integer denoting the total cost of removing all elements from the array.`
 
 #### Examples :
 
-**Input 1:** `A = [1, 2, 3]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `19`
+**Input 1:** `A = [2, 1]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `4`
 
-**Input 2:** `A = [2, 1, 3]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `20`
+**Input 2:** `A = [5]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `5`
 
 #### Example Explanation
 
 ***Explanation 1:***
 
 ```
-The different subarrays for the given array are: [1], [2], [3], [1, 2], [2, 3], [1, 2, 3].
-Their sums are: 1 + 2 + 3 + 3 + 5 + 6 = 20
+ Given array A = [2, 1]
+ Remove 2 from the array => [1]. Cost of this operation is (2 + 1) = 3.
+ Remove 1 from the array => []. Cost of this operation is (1) = 1.
+ So, total cost is = 3 + 1 = 4.
+```
+
+***Explanation 2:*** `There is only one element in the array. So, cost of removing is 5.`
+
+</details>
+
+### 6.2  Noble Integer
+
+<details>
+<summary>NobleInteger</summary>
+
+#### Problem Description
+
+```
+Given an integer array A, 
+find if an integer p exists in the array such that the number of integers greater than p in the array equals p.
+```
+
+#### Problem Constraints
+
+- 1 <= |A| <= 2*10<sup>5</sup>
+- -10<sup>8</sup> <= A[i] <= 10<sup>8</sup>
+
+#### Input Format : `First and only argument is an integer array A.`
+
+#### Output Format : `Return 1 if any such integer p is present else, return -1.`
+
+#### Examples :
+
+**Input 1:** `A = [3, 2, 1, 3]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `1`
+
+**Input 2:** `A = [1, 1, 3, 3]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `-1`
+
+#### Example Explanation
+
+***Explanation 1:*** ` For integer 2, there are 2 greater elements in the array..`
+
+***Explanation 2:*** ` There exist no integer satisfying the required conditions.`
+
+</details>
+
+### 6.3  Kth Smallest Element
+
+<details>
+<summary>KthSmallestElement</summary>
+
+#### Problem Description
+
+```
+Find the Bth smallest element in given array A .
+NOTE: Users should try to solve it in less than equal to B swaps.
+```
+
+#### Problem Constraints
+
+- 1 <= |A| <= 100000
+- 1 <= B <= min(|A|, 500)
+- 1 <= A[i] <= 10<sup>9</sup>
+
+#### Input Format : 
+```
+The first argument is an integer array A.
+The second argument is integer B.
+```
+
+#### Output Format : `Return the Bth smallest element in given array.`
+
+#### Examples :
+
+**Input 1:** `Input 1: A = [2, 1, 4, 3, 2] B = 3`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `2`
+
+**Input 2:** `A = [1, 2] B = 2` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `-1`
+
+#### Example Explanation
+
+***Explanation 1:*** ` For integer 2, there are 2 greater elements in the array..`
+
+***Explanation 2:*** ` There exist no integer satisfying the required conditions.`
+
+</details>
+
+---
+
+## Array - 2D Matrix
+
+### 7.1 Column Sum
+
+<details>
+<summary>Matrix - ColumnSum2DArray</summary>
+
+#### Problem Description
+
+```
+You are given a 2D integer matrix A, return a 1D integer array containing column-wise sums of original matrix.
+```
+
+#### Problem Constraints
+
+- 1 <= A.size() <= 10<sup>3</sup>
+- 1 <= A[i].size() <= 10<sup>3</sup>
+- 1 <= A[i][j] <= 10<sup>3</sup>
+
+#### Input Format : `First argument is a 2D array of integers.(2D matrix).`
+
+#### Output Format : `Return an array containing column-wise sums of original matrix.`
+
+#### Examples :
+
+**Input 1:** `A = [[1,2,3,4] [5,6,7,8] [9,2,3,4]]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `{15,10,13,16}`
+
+#### Example Explanation
+
+***Explanation 1:***
+
+```
+Column 1 = 1+5+9 = 15
+Column 2 = 2+6+2 = 10
+Column 3 = 3+7+3 = 13
+Column 4 = 4+8+4 = 16
+```
+
+</details>
+
+### 7.2 Main Diagonal Sum
+
+<details>
+<summary>Matrix - MainDiagonalSum</summary>
+
+#### Problem Description
+
+```
+You are given a N X N integer matrix. You have to find the sum of all the main diagonal elements of A.
+Main diagonal of a matrix A is a collection of elements A[i, j] such that i = j.
+```
+
+#### Problem Constraints
+
+- 1 <= N <= 10<sup>3</sup>
+- 1000 <= A[i][j] <= 100
+
+#### Input Format :
+
+```
+There are 1 lines in the input. 
+First 2 integers R, C are the number of rows and columns. 
+Then R * C integers follow corresponding to the rowwise numbers in the 2D array A.
+```
+
+#### Output Format : `Return an integer denoting the sum of main diagonal elements.`
+
+#### Examples :
+
+**Input 1:** `3 3 1 -2 -3 -4 5 -6 -7 -8 9`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `15`
+
+**Input 2:** `2 2 3 2 2 3`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `6`
+
+#### Example Explanation
+
+***Explanation 1:***
+
+```
+The size of matrix is 3.
+So, considering the indexing from 0.
+Main diagonal elements will be A[0][0], A[1][1] and A[2][2]
+A[1][1] + A[2][2] + A[3][3] = 1 + 5 + 9 = 15
 ```
 
 ***Explanation 2:***
 
 ```
-The different subarrays for the given array are: [2], [1], [3], [2, 1], [1, 3], [2, 1, 3].
-Their sums are: 2 + 1 + 3 + 3 + 4 + 6 = 19
+The size of matrix is 2.
+So, considering the indexing from 0.
+Main diagonal elements will be A[0][0] and A[1][1].
+A[1][1] + A[2][2] = 3 + 3 = 6
+```
+
+</details>
+
+---
+
+### 7.3  Anti Diagonals
+
+<details>
+<summary>Matrix - AntiDiagonal</summary>
+
+#### Problem Description
+
+```
+Give a N * N square matrix A, return an array of its anti-diagonals. Look at the example for more details.
+```
+
+#### Problem Constraints
+
+- 1<= N <= 1000
+- 1<= A[i][j] <= 1e9
+
+#### Input Format : `Only argument is a 2D array A of size N * N.`
+
+#### Output Format :
+
+```
+Return a 2D integer array of size (2 * N-1) * N, representing the anti-diagonals of input array A.
+The vacant spaces in the grid should be assigned to 0.
+```
+
+#### Examples :
+
+**Input 1:** `[1 2 3] [4 5 6] [7 8 9]]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+**Output 1:**
+
+```
+[1 0 0
+2 4 0
+3 5 7
+6 8 0
+9 0 0]
+```
+
+**Input 2:** `[[1 2] [3 4]]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+**Output 2:**
+
+```
+1 0
+2 3
+4 0
+```
+
+#### Example Explanation
+
+***Explanation 1:***
+
+```
+The first anti diagonal of the matrix is [1 ], the rest spaces shoud be filled with 0 making the row as [1, 0, 0].
+The second anti diagonal of the matrix is [2, 4 ], the rest spaces shoud be filled with 0 making the row as [2, 4, 0].
+The third anti diagonal of the matrix is [3, 5, 7 ], the rest spaces shoud be filled with 0 making the row as [3, 5, 7].
+The fourth anti diagonal of the matrix is [6, 8 ], the rest spaces shoud be filled with 0 making the row as [6, 8, 0].
+The fifth anti diagonal of the matrix is [9 ], the rest spaces shoud be filled with 0 making the row as [9, 0, 0].
+```
+
+***Explanation 2:***
+
+```
+The first anti diagonal of the matrix is [1 ], the rest spaces shoud be filled with 0 making the row as [1, 0, 0].
+The second anti diagonal of the matrix is [2, 4 ], the rest spaces shoud be filled with 0 making the row as [2, 4, 0].
+The third anti diagonal of the matrix is [3, 0, 0 ], the rest spaces shoud be filled with 0 making the row as [3, 0, 0].
+```
+
+</details>
+
+### 7.4 Matrix Transpose
+
+<details>
+<summary>Matrix - Matrix Transpose</summary>
+
+#### Problem Description
+
+```
+Given a 2D integer array A, return the transpose of A.
+The transpose of a matrix is the matrix flipped over its main diagonal, switching the matrix's row and column indices.
+```
+
+#### Problem Constraints
+
+- 1 <= A.size() <= 1000
+- 1 <= A[i].size() <= 1000
+- 1 <= A[i][j] <= 1000
+
+#### Input Format : `First argument is a 2D matrix of integers.`
+
+#### Output Format : `You have to return the Transpose of this 2D matrix.`
+
+#### Examples :
+
+**Input 1:** `A = [[1, 2, 3],[4, 5, 6],[7, 8, 9]]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:
+** `[[1, 4, 7], [2, 5, 8], [3, 6, 9]]`
+
+**Input 2:** `A = [[1, 2],[1, 2],[1, 2]]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `[[1, 1, 1], [2, 2, 2]]`
+
+#### Example Explanation
+
+***Explanation 1:***
+
+```
+Clearly after converting rows to column and columns to rows of
+ [[1, 2, 3],[4, 5, 6],[7, 8, 9]]
+ we will get [[1, 4, 7], [2, 5, 8], [3, 6, 9]].
+```
+
+***Explanation 2:***
+
+```
+After transposing the matrix, A becomes [[1, 1, 1], [2, 2, 2]]
+```
+
+</details>
+
+### 7.5 Rotate Matrix
+
+<details>
+<summary>Matrix - RotateMatrix</summary>
+
+#### Problem Description
+
+```
+You are given a n x n 2D matrix A representing an image.
+Rotate the image by 90 degrees (clockwise).
+You need to do this in place.
+Note: If you end up using an additional array, you will only receive partial score
+```
+
+#### Problem Constraints
+
+- 1 <= n <= 1000
+
+#### Input Format : `First argument is a 2D matrix A of integers.`
+
+#### Output Format : `Return the 2D rotated matrix..`
+
+#### Examples :
+
+**Input 1:** `A =  [[1, 2],[3, 4]]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `[[3, 1],[4, 2]]`
+
+**Input 2:** `A =  [[1, 2, 3],[4, 5, 6],[7, 8, 9]]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:
+** `[[7, 4, 1], [8, 5, 2], [9, 6, 3]]`
+
+#### Example Explanation
+
+***Explanation 1:***
+
+```
+ After rotating the matrix by 90 degree:
+ 1 goes to 2, 2 goes to 4
+ 4 goes to 3, 3 goes to 1
+```
+
+***Explanation 2:***
+
+```
+ After rotating the matrix by 90 degree:
+ 1 goes to 3, 3 goes to 9
+ 2 goes to 6, 6 goes to 8
+ 9 goes to 7, 7 goes to 1
+ 8 goes to 4, 4 goes to 2
 ```
 
 </details>
@@ -771,7 +1107,7 @@ Their sums are: 2 + 1 + 3 + 3 + 4 + 6 = 19
 
 ## Bit Manipulations
 
-### 7.1 Sum of All SubArrays
+### 8.1 Sum of All SubArrays
 
 <details>
 <summary>SumAllSubArrays</summary>
@@ -823,7 +1159,7 @@ Their sums are: 2 + 1 + 3 + 3 + 4 + 6 = 19
 
 ## String
 
-### 8.1 Toggle Case
+### 9.1 Toggle Case
 
 <details>
 <summary>Strings - StringToggle</summary>
@@ -866,7 +1202,7 @@ For e.g 'A' is changed to 'a', 'e' is changed to 'E', etc
 ***Explanation 2:*** `"tHiSiSaStRiNg" changes to "ThIsIsAsTrInG"`
 </details>
 
-### 8.2 String Reverse
+### 9.2 String Reverse
 
 <details>
 <summary>Strings - StringReverse</summary>
@@ -897,12 +1233,10 @@ Given a string A, you are asked to reverse the string and return the reversed st
 ***Explanation 1:*** `Reverse the given string.`
 </details>
 
----
-
-### 8.3 Toggle Case
+### 9.3 Reverse the String
 
 <details>
-<summary>Strings - StringToggle</summary>
+<summary>Strings - ReverseLine</summary>
 
 #### Problem Description
 
@@ -936,7 +1270,7 @@ If there are multiple spaces between words, reduce them to a single space in the
 ***Explanation 2:*** `We reverse the string word by word so the string becomes "ib is this".`
 </details>
 
-### 8.3 Toggle Case
+### 9.4 Longest Palindromic Substring
 
 <details>
 <summary>Strings - StringToggle</summary>

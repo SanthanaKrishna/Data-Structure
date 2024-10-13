@@ -6,6 +6,14 @@ package org.DSA.Strings;
  * For e.g 'A' is changed to 'a', 'e' is changed to 'E', etc.
  * Input 1: A = "Hello"  Output 1: hELLO
  * Input 2: A = "tHiSiSaStRiNg" Output 2: ThIsIsAsTrInG
+ * Explanation 1:
+ *  'H' changes to 'h'
+ *  'e' changes to 'E'
+ *  'l' changes to 'L'
+ *  'l' changes to 'L'
+ *  'o' changes to 'O'
+ * Explanation 2:
+ *  "tHiSiSaStRiNg" changes to "ThIsIsAsTrInG".
  */
 public class StringToggle {
 
