@@ -437,7 +437,7 @@ Total SubArrays = N(N+1)/2
 ### 4.1 Special Subsequences "AG" - 2
 
 <details>
-<summary>SpecialSubSequences</summary>
+<summary>String - SpecialSubSequences</summary>
 
 #### Problem Description
 
