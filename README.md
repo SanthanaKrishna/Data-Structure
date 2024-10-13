@@ -719,7 +719,7 @@ The remaining arguments B and C are integers
 
 ## Array - Sorting
 
-### 6.1 --- Sum of All SubArrays
+### 6.1 Sum of All SubArrays
 
 <details>
 <summary>SumAllSubArrays</summary>
@@ -771,7 +771,7 @@ Their sums are: 2 + 1 + 3 + 3 + 4 + 6 = 19
 
 ## Bit Manipulations
 
-### 7.1 ---0 Sum of All SubArrays
+### 7.1 Sum of All SubArrays
 
 <details>
 <summary>SumAllSubArrays</summary>

@@ -1,4 +1,4 @@
-package org.DSA;
+package org.DSA.Strings;
 
 /** Carry Forward & SubArrays - Special Subsequences "AG" - 2
  * You have given a string A having Uppercase English letters.
