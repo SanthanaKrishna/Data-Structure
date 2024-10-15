@@ -815,7 +815,8 @@ NOTE: Users should try to solve it in less than equal to B swaps.
 - 1 <= B <= min(|A|, 500)
 - 1 <= A[i] <= 10<sup>9</sup>
 
-#### Input Format : 
+#### Input Format :
+
 ```
 The first argument is an integer array A.
 The second argument is integer B.
@@ -1834,3 +1835,159 @@ We, finally, shift the first disk from the middle tower to the last tower.
 `We can see that this was the only unique path with minimal moves to move all disks from the first to the third tower.`
 
 </details>
+
+
+---
+
+## Hashing
+
+## Hashing
+
+### 12.5 Check Pair Sum
+
+<details>
+<summary>Hashing -  CheckPairSum</summary>
+
+#### Problem Description
+
+```
+Given an Array of integers B, and a target sum A.
+Check if there exists a pair (i,j) such that Bi + Bj = A and i!=j.
+```
+
+#### Problem Constraints
+
+- 1 <= Length of array B <= 10<sub>5</sub>
+- 0 <= Bi <= 10<sub>9</sub>
+- 0 <= A <= 10<sub>9</sub>
+
+#### Input Format : `First argument A is the Target sum, and second argument is the array B.`
+
+#### Output Format : `Return an integer value 1 if there exists such pair, else return 0.`
+
+#### Examples :
+
+**Input 1:** `A = 8   B= [3, 5, 1, 2, 1, 2]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `1`
+
+**Input 2:** `A = 21  B= [9, 10, 7, 10, 9, 1, 5, 1, 5]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `0`
+
+#### Example Explanation
+
+***Explanation 1:*** `It is possible to obtain sum 8 using 3 and 5.`
+
+***Explanation 2:*** `There is no such pair exists.`
+
+</details>
+
+### 12.6 Count Pair Difference
+
+<details>
+<summary>Hashing -  CountPairDifference</summary>
+
+#### Problem Description
+
+```
+You are given an array A of N integers and an integer B.
+Count the number of pairs (i,j) such that A[i] - A[j] = B and i ≠ j.
+Since the answer can be very large, return the remainder after dividing the count with 109+7.
+```
+
+#### Problem Constraints
+
+- 1 <= N <= 10<sub>5</sub>
+- 1 <= A[i] <= 10<sub>9</sub>
+- 1 <= B <= 10<sub>9</sub>
+
+#### Input Format : `First argument A is an array of integers and second argument B is an integer.`
+
+#### Output Format : `Return an integer.`
+
+#### Examples :
+
+**Input 1:** `A = [3, 5, 1, 2] B = 4`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `1`
+
+**Input 2:** `A = [1, 2, 1, 2] B = 1` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `4`
+
+#### Example Explanation
+
+***Explanation 1:*** `The only pair is (2, 3) which gives difference as 4.`
+
+***Explanation 2:*** `The pair which gives difference as 3 are (2, 1), (4, 1), (2, 3) and (4, 3).`
+
+</details>
+
+### 12.7  Sub-array with 0 sum
+
+<details>
+<summary>SubArray -  SubArraySum0</summary>
+
+#### Problem Description
+
+```
+Given an array of integers A, find and return whether the given array contains a non-empty subarray with a sum equal to 0.
+If the given array contains a sub-array with sum zero return 1, else return 0.
+```
+
+#### Problem Constraints
+
+- 1 <= |A| <= 100000
+- 10^9 <= A[i] <= 10^9
+
+#### Input Format : `The only argument given is the integer array A.`
+
+#### Output Format : `Return whether the given array contains a subarray with a sum equal to 0.`
+
+#### Examples :
+
+**Input 1:** ` A = [1, 2, 3, 4, 5]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `0`
+
+**Input 2:** `A = [4, -1, 1]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `1`
+
+#### Example Explanation
+
+***Explanation 1:*** `No subarray has sum 0.`
+***Explanation 2:*** `The subarray [-1, 1] has sum 0.`
+
+</details>
+
+### 12.8 Subarray Sum Equals K
+
+<details>
+<summary>SubArray -  SubArraySumK</summary>
+
+#### Problem Description
+
+```
+Given an array of integers A and an integer B.
+Find the total number of subarrays having sum equals to B.
+```
+
+#### Problem Constraints
+
+- 1 <= length of the array <= 50000
+- 1000 <= A[i] <= 1000
+
+#### Input Format :
+
+```
+The first argument given is the integer array A.
+The second argument given is integer B
+```
+
+#### Output Format : `Return the total number of subarrays having sum equals to B.`
+
+#### Examples :
+
+**Input 1:** `A = [1, 0, 1] B = 1`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `4`
+
+**Input 2:** `A = [0, 0, 0] B = 0` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `6`
+
+#### Example Explanation
+
+***Explanation 1:*** `[1], [1, 0], [0, 1] and [1] are four subarrays having sum 1.`
+
+***Explanation 2:*** `All the possible subarrays having sum 0.`
+
+</details>
+
+---

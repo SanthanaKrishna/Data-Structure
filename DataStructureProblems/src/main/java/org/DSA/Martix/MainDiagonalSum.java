@@ -32,4 +32,4 @@ public class MainDiagonalSum {
         System.out.println(result); //15
     }
 }
-}
+
