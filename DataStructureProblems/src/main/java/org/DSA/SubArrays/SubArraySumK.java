@@ -11,17 +11,17 @@ import java.util.HashSet;
  * Explanation 2: The subarray [-1, 1] has sum 0
  */
 public class SubArraySumK {
-    static int PrefixSumArray(int[] arr) {
-        HashSet<Long> set = new HashSet<>();
-        int n = arr.length;
-        long sum = 0;
-        set.add(sum);  // Add 0 to the set to handle the case when subarray starting from index 0 sums to 0
+    static int PrefixSumArray(int[] arr, int K) {
+        HashSet<Integer> set = new HashSet<>();
+        int n = arr.length, sum = 0;
+        set.add(sum);
         for (int i = 0; i < n; i++) {
             sum += arr[i];
-            if (set.contains(sum)) {   // Check if the current prefix sum already exists in the set
-                return 1;
+            int b = sum - K;  // pf[i] - pf[i-1]=K --> a-b=k --> b=a-K
+            if (set.contains(b)) {
+                return b;
             }
-            set.add(sum);  // Add current prefix sum to the set
+            set.add(sum);
         }
 //        if (set.size() < n) {
 //            return 1;
@@ -31,8 +31,9 @@ public class SubArraySumK {
 
     public static void main(String[] args) {
 //        int[] arr = {2, 2, 1, -3, 4, 3, 1, -2, -3, 2};
-        int[] arr = {1, 2, 3, 4, 5};
-        int result = PrefixSumArray(arr);
+        int[] arr = {-2,16,-12,5,7,-1,2,12,11};
+        int B = 17;
+        int result = PrefixSumArray(arr, B);
         System.out.println(result);
     }
 }

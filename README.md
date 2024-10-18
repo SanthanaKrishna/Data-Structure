@@ -1784,7 +1784,7 @@ Given two positive integers A and B. Implement Fast Power function to compute AB
 ### 11.9 Tower of Hanoi
 
 <details>
-<summary>Recursion -  PowerFunction</summary>
+<summary>Recursion -  TowerHanoi</summary>
 
 #### Problem Description
 
@@ -1838,8 +1838,6 @@ We, finally, shift the first disk from the middle tower to the last tower.
 
 
 ---
-
-## Hashing
 
 ## Hashing
 
@@ -1987,6 +1985,122 @@ The second argument given is integer B
 ***Explanation 1:*** `[1], [1, 0], [0, 1] and [1] are four subarrays having sum 1.`
 
 ***Explanation 2:*** `All the possible subarrays having sum 0.`
+
+</details>
+
+---
+
+## Sorting
+
+### 13.1 Smallest Number
+
+<details>
+<summary>Sorting -  SmallestArray</summary>
+
+#### Problem Description
+
+```
+An integer is given to you in the form of an array, with each element being a separate digit.
+Find the smallest number (leading zeroes are allowed) that can be formed by rearranging the digits of the given number in an array. 
+Return the smallest number in the form an array.
+Note - Do not use any sorting algorithm or library's sort method.
+```
+
+#### Problem Constraints
+
+- 1 ≤ N ≤ 10<sub>5</sub>
+- 0 ≤ A[i] ≤ 9
+
+#### Input Format : `First argument A is an array of length N, representing digits of the number.`
+
+#### Output Format : `Return the array representing the smallest possible number in form of an array.`
+
+#### Examples :
+
+**Input 1:** `A = [6, 3, 4, 2, 7, 2, 1]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `[1, 2, 2, 3, 4, 6, 7]  `
+
+**Input 2:** `A = [4, 2, 7, 3, 9, 0]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `[0, 2, 3, 4, 7, 9]`
+
+#### Example Explanation
+
+***Explanation 1:*** `It can be proved that a rearrangement for 6342721 cannot be smaller than 1223467.`
+
+***Explanation 2:*** `Similarly, a rearrangement for 427390 cannot be smaller than 023479, i.e. 23479.`
+
+</details>
+
+### 13.2 Merge Two Sorted Arrays
+
+<details>
+<summary>Sorting -  MergeTwoSortedArray</summary>
+
+#### Problem Description
+
+```
+Given two sorted integer arrays A and B, merge B and A as one sorted array and return it as an output.
+Note: A linear time complexity is expected and you should avoid use of any library function.
+```
+
+#### Problem Constraints
+
+- 2×10<sub>9</sub> <= A[i], B[i] <= 2×10<sub>9</sub>
+- 1 <= |A|, |B| <= 5×104
+
+#### Input Format :
+
+```
+First Argument is a 1-D array representing  A.
+Second Argument is also a 1-D array representing B.
+```
+
+#### Output Format : `Return a 1-D vector which you got after merging A and B.`
+
+#### Examples :
+
+**Input 1:** `A = [4, 7, 9] B = [2, 11, 19]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `[2, 4, 7, 9, 11, 19]`
+
+**Input 2:** `A = [1] B = [2]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `[1, 2]`
+
+#### Example Explanation
+
+***Explanation:*** `Merging A and B produces the output as described above.`
+
+</details>
+
+### 13.3 Merge Sor
+
+<details>
+<summary>Sorting -  SmallestArray</summary>
+
+#### Problem Description
+
+```
+An integer is given to you in the form of an array, with each element being a separate digit.
+Find the smallest number (leading zeroes are allowed) that can be formed by rearranging the digits of the given number in an array. 
+Return the smallest number in the form an array.
+Note - Do not use any sorting algorithm or library's sort method.
+```
+
+#### Problem Constraints
+
+- 1 ≤ N ≤ 10<sub>5</sub>
+- 0 ≤ A[i] ≤ 9
+
+#### Input Format : `First argument A is an array of length N, representing digits of the number.`
+
+#### Output Format : `Return the array representing the smallest possible number in form of an array.`
+
+#### Examples :
+
+**Input 1:** `A = [6, 3, 4, 2, 7, 2, 1]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `[1, 2, 2, 3, 4, 6, 7]  `
+
+**Input 2:** `A = [4, 2, 7, 3, 9, 0]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `[0, 2, 3, 4, 7, 9]`
+
+#### Example Explanation
+
+***Explanation 1:*** `It can be proved that a rearrangement for 6342721 cannot be smaller than 1223467.`
+
+***Explanation 2:*** `Similarly, a rearrangement for 427390 cannot be smaller than 023479, i.e. 23479.`
 
 </details>
 
