@@ -1841,6 +1841,102 @@ We, finally, shift the first disk from the middle tower to the last tower.
 
 ## Hashing
 
+### 12.1 Frequency of element query
+
+<details>
+<summary>Hashing -  FrequencyElementQuery</summary>
+
+#### Problem Description
+
+```
+SCALER organizes a series of contests aimed at helping learners enhance their coding skills.
+Each learner can participate in multiple contests, and their participation is represented by integers in an array. 
+The goal is to identify how frequently each learner has participated in these contests.
+This information will help SCALER determine which learners are participating the least, allowing them to provide targeted support and encouragement.
+
+Given an array A that represents the participants of various contests, where each integer corresponds to a specific learner, and an array B containing the learners for whom you want to check participation frequency,
+your task is to find the frequency of each learner from array B in the array A and return a list containing all these frequencies
+```
+
+#### Problem Constraints
+
+- 1 <= |A| <= 10<sub>5</sub>
+- 1 <= |B| <= 10<sub>5</sub>
+- 1 <= A[i] <= 10<sub>5</sub>
+- 1 <= B[i] <= 10<sub>5</sub>
+
+#### Input Format :
+
+```
+First argument A is an array of integers.
+Second argument B is an array of integers denoting the queries.
+```
+
+#### Output Format : `Return an array of integers containing the frequency of each learner in B as found in array A.`
+
+#### Examples :
+
+**Input 1:** `A = [1, 2, 1, 1] B = [1, 2]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `[3, 1]`
+
+**Input 2:** `A = [2, 5, 9, 2, 8] B = [3, 2]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `[0, 2]`
+
+#### Example Explanation
+
+***Explanation 1:***
+
+```
+For Input 1:
+The frequency of learner 1 in the array A is 3 (they participated in three contests).
+The frequency of learner 2 in the array A is 1 (they participated in one contest).
+```
+
+***Explanation 2:***
+
+```
+For Input 2:
+The frequency of learner 3 in the array A is 0 (they did not participate in any contest).
+The frequency of learner 2 in the array A is 2 (they participated in two contests)
+```
+
+</details>
+
+### 12.4 Longest Substring Without Repeat
+
+<details>
+<summary>Hashing -  LongestSubstringWithoutRepeat</summary>
+
+#### Problem Description
+
+```
+Determine the "GOOD"ness of a given string A, where the "GOOD"ness is defined by the length of the longest substring that contains no repeating characters. 
+The greater the length of this unique-character substring, the higher the "GOOD"ness of the string.
+Your task is to return an integer representing the "GOOD"ness of string A.
+Note: The solution should be achieved in O(N) time complexity, where N is the length of the string.
+```
+
+#### Problem Constraints
+
+- 1 <= size(A) <= 10<sub>6</sub>
+- String consists of lowerCase,upperCase characters and digits are also present in the string A.
+
+#### Input Format : `Single Argument representing string A.`
+
+#### Output Format : `Return an integer denoting the maximum possible length of substring without repeating characters.`
+
+#### Examples :
+
+**Input 1:** `A = "abcabcbb"`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `3`
+
+**Input 2:** `A = "AaaA"` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `2`
+
+#### Example Explanation
+
+***Explanation 1:*** `Substring "abc" is the longest substring without repeating characters in string A.`
+
+***Explanation 2:*** `Substring "Aa" or "aA" is the longest substring without repeating characters in string A.`
+
+</details>
+
 ### 12.5 Check Pair Sum
 
 <details>
@@ -1948,10 +2044,10 @@ If the given array contains a sub-array with sum zero return 1, else return 0.
 
 </details>
 
-### 12.8 Subarray Sum Equals K
+### 12.8 SubArray Sum Equals K
 
 <details>
-<summary>SubArray -  SubArraySumK</summary>
+<summary>SubArray -  SubArraySumEqualK</summary>
 
 #### Problem Description
 

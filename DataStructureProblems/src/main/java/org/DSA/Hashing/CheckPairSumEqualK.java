@@ -32,7 +32,7 @@ public class CheckPairSumEqualK {
     public static void main(String[] args) {
         int A = 22;
 //        int[] B = {3, 5, 1, 2, 1, 2};
-        int[] B = {8,9,1,-2,4,5,11,-6,4,11};
+        int[] B = {8, 9, 1, -2, 4, 5, 11, -6, 4, 11};
         int result = checkPairSum(B, A);
         System.out.println(result);
     }
