@@ -118,6 +118,8 @@ A <bold>proper divisor</bold> of a natural number is the divisor that is strictl
 ***Explanation 2:*** `For A = 6, the sum of its proper divisors = 1 + 2 + 3 = 6, is equal to 6.`
 </details>
 
+---
+
 ## Array Basics
 
 ### 2.1 Good Pair
@@ -1897,6 +1899,80 @@ For Input 2:
 The frequency of learner 3 in the array A is 0 (they did not participate in any contest).
 The frequency of learner 2 in the array A is 2 (they participated in two contests)
 ```
+
+</details>
+
+### 12.2 Count distinct elements
+
+<details>
+<summary>Hashing -  CountDistinctElements</summary>
+
+#### Problem Description
+
+```
+Given an array A of N integers, return the number of unique elements in the array.
+```
+
+#### Problem Constraints
+
+- 1 <= N <= 10<sub>5</sub>
+- 1 <= A[i] <= 10<sub>9</sub>
+
+#### Input Format :`First argument A is an array of integers.`
+
+#### Output Format : `Return an integer.`
+
+#### Examples :
+
+**Input 1:** `A = [3, 4, 3, 6, 6]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `3`
+
+**Input 2:** `A = [3, 3, 3, 9, 0, 1, 0]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `4`
+
+#### Example Explanation
+
+***Explanation 1:*** `The distinct elements of the array are 3, 4 and 6.`
+***Explanation 2:*** `The distinct elements of the array are 3, 9, 0 and 1.`
+
+</details>
+
+
+### 12.3 Common Elements
+
+<details>
+<summary>Hashing -  Common Elements</summary>
+
+#### Problem Description
+
+```
+Given two integer arrays, A and B of size N and M, respectively. 
+Your task is to find all the common elements in both the array.
+NOTE: Each element in the result should appear as many times as it appears in both arrays.
+The result can be in any order.
+```
+
+#### Problem Constraints
+
+- 1 <= N, M <= 10<sub>5</sub>
+- 1 <= A[i] <= 10<sub>9</sub>
+
+#### Input Format :
+```
+First argument is an integer array A of size N.
+Second argument is an integer array B of size M.
+```
+
+#### Output Format : `Return an integer array denoting the common elements.`
+
+#### Examples :
+
+**Input 1:** ` A = [1, 2, 2, 1]  B = [2, 3, 1, 2]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `[1, 2, 2]`
+
+**Input 2:** `A = [2, 1, 4, 10] B = [3, 6, 2, 10, 10]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `[2, 10]`
+
+#### Example Explanation
+
+***Explanation 1:*** `Elements (1, 2, 2) appears in both the array. Note 2 appears twice in both the array.`
+***Explanation 2:*** `Elements (2, 10) appears in both the array.`
 
 </details>
 
