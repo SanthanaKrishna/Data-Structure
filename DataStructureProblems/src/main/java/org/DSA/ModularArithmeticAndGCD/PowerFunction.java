@@ -11,4 +11,8 @@ package org.DSA.ModularArithmeticAndGCD;
  * Explanation 1: 3^3 % 1 = 27 % 1 = 0
  */
 public class PowerFunction {
+    public static void main(String[] args) {
+        int A = 2, B = 3, C = 3;
+//        int result=
+    }
 }
