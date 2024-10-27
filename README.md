@@ -1,6 +1,6 @@
 # Data-Structure
 
-## Basic Problems Solving
+## 1. Basic Problems Solving
 
 #### Sum of N natural numbers
 
@@ -120,7 +120,7 @@ A <bold>proper divisor</bold> of a natural number is the divisor that is strictl
 
 ---
 
-## Array Basics
+## 2. Array Basics
 
 ### 2.1 Good Pair
 
@@ -296,7 +296,7 @@ because all the elements after it have to have their indexes recomputed.
 
 ---
 
-## Array - Prefix Sum
+## 3. Array - Prefix Sum
 
 #### Prefix Sum Formula
 
@@ -426,7 +426,7 @@ Therefore, the required output is 3.
 
 ---
 
-## Array - Carry Forward & SubArrays
+## 4. Array - Carry Forward & SubArrays
 
 #### Total SubArray Formula
 
@@ -579,7 +579,7 @@ it contains at least one occurrence of the maximum value of the array and at lea
 
 ---
 
-## Array - Sliding Window & Contribution Technique
+## 5. Array - Sliding Window & Contribution Technique
 
 ### 5.1 Sum of All SubArrays
 
@@ -719,7 +719,7 @@ The remaining arguments B and C are integers
 
 ---
 
-## Array - Sorting
+## 6. Array - Sorting
 
 ### 6.1  Elements Removal
 
@@ -842,7 +842,7 @@ The second argument is integer B.
 
 ---
 
-## Array - 2D Matrix
+## 7. Array - 2D Matrix
 
 ### 7.1 Column Sum
 
@@ -1108,7 +1108,7 @@ Note: If you end up using an additional array, you will only receive partial sco
 
 ---
 
-## Bit Manipulations
+## 8. Bit Manipulations
 
 ### 8.1 Sum of All SubArrays
 
@@ -1160,7 +1160,7 @@ Their sums are: 2 + 1 + 3 + 3 + 4 + 6 = 19
 
 ---
 
-## String
+## 9. String
 
 ### 9.1 Toggle Case
 
@@ -1311,7 +1311,7 @@ Incase of conflict, return the substring which occurs first ( with the least sta
 
 ---
 
-## Arrays 2: Two Dimensional
+## 10. Arrays 2: Two Dimensional
 
 ### 10.1 Search in a row wise and column wise sorted matrix
 
@@ -1426,7 +1426,7 @@ Only 1 is to be arranged.
 ```![img.png](img.png)```
 </details>
 
-### 10.2 Sum of all SubMatrices
+### 10.3 Sum of all SubMatrices
 
 <details>
 <summary>Matrix - SumSubMatrix</summary>
@@ -1475,7 +1475,7 @@ Total sum = 40
 
 ---
 
-## Recursion
+## 11. Recursion
 
 #### Description : `A function that solves a problem by breaking it into smaller subproblems and calling itself`
 
@@ -1838,10 +1838,126 @@ We, finally, shift the first disk from the middle tower to the last tower.
 
 </details>
 
+---
+
+## 12. Maths: Modular Arithmetic & GCD
+
+### 12.1 Implement Power Function
+
+<details>
+<summary>ModularArithmeticAndGCD -  ModuleFastPower</summary>
+
+#### Problem Description
+
+```
+Implement pow(A, B) % C.
+In other words, given A, B and C, Find (AB % C).
+Note: The remainders on division cannot be negative. 
+In other words, make sure the answer you return is non-negative.
+```
+
+#### Problem Constraints
+
+- -10<sub>9</sub> <= A <= 10<sub>9</sub>
+- 0 <= B <= 10<sub>9</sub>
+- 1 <= C <= 10<sub>9</sub>
+
+#### Input Format : `Given three integers A, B, C.`
+
+#### Output Format : `Return an integer.`
+
+#### Examples :
+
+**Input 1:** `A = 2  B = 3  C = 3`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `2`
+
+**Input 2:** `A = 3 B = 3  C = 1` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `0`
+
+#### Example Explanation
+
+***Explanation 1:*** `2^3 % 3 = 8 % 3 = 2`
+***Explanation 2:*** `3^3 % 1 = 27 % 1 = 0`
+
+</details>
+
+### 12.2 Pair Sum divisible by M
+
+<details>
+<summary>ModularArithmeticAndGCD - PairSumDivisibleByM</summary>
+
+#### Problem Description
+
+```
+Given an array of integers A and an integer B, find and return the number of pairs in A whose sum is divisible by B.
+Since the answer may be large, return the answer modulo (109 + 7).
+Note: Ensure to handle integer overflow when performing the calculations.
+```
+
+#### Problem Constraints
+
+- 1 <= length of the array <= 100000
+- 1 <= A[i] <= 10<sub>9</sub>
+- 1 <= B <= 10<sub>6</sub>
+
+#### Input Format : `Given three integers A, B, C.`
+
+#### Output Format : `Return an integer.`
+
+#### Examples :
+
+**Input 1:** `A = 2  B = 3  C = 3`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `2`
+
+**Input 2:** `A = 3 B = 3  C = 1` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `0`
+
+#### Example Explanation
+
+***Explanation 1:*** `2^3 % 3 = 8 % 3 = 2`
+***Explanation 2:*** `3^3 % 1 = 27 % 1 = 0`
+
+</details>
+
+### 12.2 Pair Sum divisible by M
+
+<details>
+<summary>ModularArithmeticAndGCD - PairSumDivisibleByM</summary>
+
+#### Problem Description
+
+```
+Given 2 non-negative integers A and B, find gcd(A, B)
+GCD of 2 integers A and B is defined as the greatest integer 'g' such that 'g' is a divisor of both A and B. 
+Both A and B fit in a 32 bit signed integer.
+Note: DO NOT USE LIBRARY FUNCTIONS.
+```
+
+#### Problem Constraints
+
+- 0 <= A, B <= 10<sub>9</sub>
+
+#### Input Format :
+
+```
+First argument is an integer A.
+Second argument is an integer B.
+```
+
+#### Output Format : `Return an integer denoting the gcd(A, B).`
+
+#### Examples :
+
+**Input 1:** `A = 4  B = 6`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `2`
+
+**Input 2:** `A = 6 B = 7` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `1`
+
+#### Example Explanation
+
+***Explanation 1:*** `2 divides both 4 and 6`
+***Explanation 2:*** `1 divides both 6 and 7`
+
+</details>
 
 ---
 
-## Hashing
+## 13. Hashing
 
 ### 12.1 Frequency of element query
 
@@ -1935,7 +2051,6 @@ Given an array A of N integers, return the number of unique elements in the arra
 
 </details>
 
-
 ### 12.3 Common Elements
 
 <details>
@@ -1956,6 +2071,7 @@ The result can be in any order.
 - 1 <= A[i] <= 10<sub>9</sub>
 
 #### Input Format :
+
 ```
 First argument is an integer array A of size N.
 Second argument is an integer array B of size M.
@@ -2162,9 +2278,9 @@ The second argument given is integer B
 
 ---
 
-## Sorting
+## 14: Sorting
 
-### 13.1 Smallest Number
+### 14.1 Smallest Number
 
 <details>
 <summary>Sorting -  SmallestArray</summary>
@@ -2201,7 +2317,7 @@ Note - Do not use any sorting algorithm or library's sort method.
 
 </details>
 
-### 13.2 Merge Two Sorted Arrays
+### 14.2 Merge Two Sorted Arrays
 
 <details>
 <summary>Sorting -  MergeTwoSortedArray</summary>
@@ -2239,7 +2355,7 @@ Second Argument is also a 1-D array representing B.
 
 </details>
 
-### 13.3 Merge Sor
+### 14.3 Merge Sort
 
 <details>
 <summary>Sorting -  SmallestArray</summary>
@@ -2247,32 +2363,465 @@ Second Argument is also a 1-D array representing B.
 #### Problem Description
 
 ```
-An integer is given to you in the form of an array, with each element being a separate digit.
-Find the smallest number (leading zeroes are allowed) that can be formed by rearranging the digits of the given number in an array. 
-Return the smallest number in the form an array.
-Note - Do not use any sorting algorithm or library's sort method.
+Given an integer array A, sort the array using Merge Sort.
 ```
 
 #### Problem Constraints
 
-- 1 ≤ N ≤ 10<sub>5</sub>
-- 0 ≤ A[i] ≤ 9
+- 1 <= |A| <= 10<sub>5</sub>
+- 1 <= A[i] <= 10<sub>9</sub>
 
-#### Input Format : `First argument A is an array of length N, representing digits of the number.`
+#### Input Format : `First argument is an integer array A.`
 
-#### Output Format : `Return the array representing the smallest possible number in form of an array.`
+#### Output Format : `Return the sorted array.`
 
 #### Examples :
 
-**Input 1:** `A = [6, 3, 4, 2, 7, 2, 1]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `[1, 2, 2, 3, 4, 6, 7]  `
+**Input 1:** `A = [1, 4, 10, 2, 1, 5]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `[1, 1, 2, 4, 5, 10]`
 
-**Input 2:** `A = [4, 2, 7, 3, 9, 0]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `[0, 2, 3, 4, 7, 9]`
+**Input 2:** `A = [3, 7, 1]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `[1, 3, 7]`
 
 #### Example Explanation
 
-***Explanation 1:*** `It can be proved that a rearrangement for 6342721 cannot be smaller than 1223467.`
+***Explanation 1 & 2:*** `Return the sorted array.`
 
-***Explanation 2:*** `Similarly, a rearrangement for 427390 cannot be smaller than 023479, i.e. 23479.`
+</details>
+
+### 14.4 Inversion count in an array
+
+<details>
+<summary>Sorting -  InversionCount</summary>
+
+#### Problem Description
+
+```
+Given an array of integers A. If i < j and A[i] > A[j], then the pair (i, j) is called an inversion of A.
+Find the total number of inversions of A modulo (10^9 + 7).
+```
+
+#### Problem Constraints
+
+- 1 <= length of the array <= 10<sub>5</sub>
+- 1 <= A[i] <= 10<sub>9</sub>
+
+#### Input Format : `The only argument given is the integer array A.`
+
+#### Output Format : `Return the number of inversions of A modulo (10^9 + 7).`
+
+#### Examples :
+
+**Input 1:** `A = [1, 3, 2]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `1`
+
+**Input 2:** `A = [3, 4, 1, 2]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `4`
+
+#### Example Explanation
+
+***Explanation 1:*** `The pair (1, 2) is an inversion as 1 < 2 and A[1] > A[2].`
+
+***Explanation 2:***
+
+```
+The pair (0, 2) is an inversion as 0 < 2 and A[0] > A[2]
+The pair (0, 3) is an inversion as 0 < 3 and A[0] > A[3]
+The pair (1, 2) is an inversion as 1 < 2 and A[1] > A[2]
+The pair (1, 3) is an inversion as 1 < 3 and A[1] > A[3]
+```
+
+</details>
+
+### 14.5 Sort by Color
+
+<details>
+<summary>Sorting -  SortByColor</summary>
+
+#### Problem Description
+
+```
+Given an array with N objects colored red, white, or blue, sort them so that objects of the same color are adjacent, with the colors in the order red, white, and blue.
+We will represent the colors as,
+red -> 0
+white -> 1
+blue -> 2
+Note: Using the library sort function is not allowed.
+```
+
+#### Problem Constraints
+
+- 1 <= N <= 1000000
+- 0 <= A[i] <= 2
+
+#### Input Format : `First and only argument of input contains an integer array A.`
+
+#### Output Format : `Return an integer array in asked order.`
+
+#### Examples :
+
+**Input 1:** `A = [0, 1, 2, 0, 1, 2]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `[0, 0, 1, 1, 2, 2]`
+
+**Input 2:** `A = [0]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `[0]`
+
+#### Example Explanation
+
+***Explanation 1:*** `[0, 0, 1, 1, 2, 2] is the required order.`
+
+***Explanation 2:*** `[0] is the required order.`
+
+</details>
+
+---
+
+## 15:  Quick Sort & Comparator Problems
+
+### 15.1 Largest Number
+
+<details>
+<summary>Sorting - LargestNumber</summary>
+
+#### Problem Description
+
+```
+Given an array A of non-negative integers, arrange them such that they form the largest number.
+Note: The result may be very large, so you need to return a string instead of an integer.
+```
+
+#### Problem Constraints
+
+- 1 <= len(A) <= 100000
+- 0 <= A[i] <= 2*10<sub>9</sub>
+
+#### Input Format : `The first argument is an array of integers.`
+
+#### Output Format : `Return a string representing the largest number.`
+
+#### Examples :
+
+**Input 1:** `A = [3, 30, 34, 5, 9]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `"9534330"`
+
+**Input 2:** `A = [2, 3, 9, 0]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `"9320"`
+
+#### Example Explanation
+
+***Explanation 1:*** `Reorder the numbers to [9, 5, 34, 3, 30] to form the largest number.`
+
+***Explanation 2:*** `Reorder the numbers to [9, 3, 2, 0] to form the largest number 9320.`
+
+</details>
+
+### 15.2 Sort by Color
+
+<details>
+<summary>Sorting - SortByColor</summary>
+
+#### Problem Description
+
+```
+Given an array with N objects colored red, white, or blue, sort them so that objects of the same color are adjacent, with the colors in the order red, white, and blue.
+We will represent the colors as,
+red -> 0
+white -> 1
+blue -> 2
+Note: Using the library sort function is not allowed.
+```
+
+#### Problem Constraints
+
+- 1 <= N <= 1000000
+- 0 <= A[i] <= 2
+
+#### Input Format : `First and only argument of input contains an integer array A.`
+
+#### Output Format : `Return an integer array in asked order.`
+
+#### Examples :
+
+**Input 1:** `A = [0, 1, 2, 0, 1, 2]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `[0, 0, 1, 1, 2, 2]`
+
+**Input 2:** `A = [0]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `[0]`
+
+#### Example Explanation
+
+***Explanation 1:*** `[0, 0, 1, 1, 2, 2] is the required order.`
+
+***Explanation 2:*** `[0] is the required order.`
+
+</details>
+
+### 15.3 Factors sort
+
+<details>
+<summary>Sorting - SortByColor</summary>
+
+#### Problem Description
+
+```
+You are given an array A of N elements. 
+Sort the given array in increasing order of number of distinct factors of each element, i.e., element having the least number of factors should be the first to be displayed and the number having highest number of factors should be the last one. 
+If 2 elements have same number of factors, then number with less value should come first.
+Note: You cannot use any extra space
+```
+
+#### Problem Constraints
+
+- 1 <= N <= 10<sub>4</sub>
+- 1 <= A[i] <= 10<sub>4</sub>
+
+#### Input Format : `First argument A is an array of integers.`
+
+#### Output Format : `Return an array of integers.`
+
+#### Examples :
+
+**Input 1:** `A = [6, 8, 9]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `[9, 6, 8]`
+
+**Input 2:** `A =  [2, 4, 7]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `[2, 7, 4]`
+
+#### Example Explanation
+
+***Explanation 1:*** `The number 9 has 3 factors, 6 has 4 factors and 8 has 4 factors.`
+
+***Explanation 2:*** `The number 2 has 2 factors, 7 has 2 factors and 4 has 3 factors.`
+
+</details>
+
+### 15.4 Quick Sort
+
+<details>
+<summary>Sorting - SortByColor</summary>
+
+#### Problem Description
+
+```
+Given an integer array A, sort the array using Quick Sort.
+```
+
+#### Problem Constraints
+
+- 1 <= |A| <= 10<sub>5</sub>
+- 1 <= A[i] <= 10<sub>9</sub>
+
+#### Input Format : `First argument is an integer array A.`
+
+#### Output Format : `Return the sorted array.`
+
+#### Examples :
+
+**Input 1:** `A = [1, 4, 10, 2, 1, 5]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `[1, 1, 2, 4, 5, 10]`
+
+**Input 2:** `A =  [3, 7, 1]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `[1, 3, 7]`
+
+#### Example Explanation
+
+***Explanation 1 & 2:*** `Return the sorted array.`
+
+</details>
+
+### 15.3 Factors sort
+
+<details>
+<summary>Sorting - SortByColor</summary>
+
+#### Problem Description
+
+```
+Given an integer array A of length N, considering the last element as pivot p, rearrange the elements such that for all i:
+if A[i] < p then it should be present on left side of the partition
+if A[i] > p then it should be present on right side of the partition
+Rearrange the given array as well as return the partition index.
+Note: All elements are distinct
+```
+
+#### Problem Constraints
+
+- 1 <= N <= 10<sub>5</sub>
+- 1 <= A[i] <= 10<sub>9</sub>
+
+#### Input Format : `The only input argument is the given vector A.`
+
+#### Output Format : `Return the partition index as well as rearrange the input array to satisfy the given conditions.`
+
+#### Examples :
+
+**Input 1:** `A = [6, 2, 0, 4, 5]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `valid  A = [2, 0, 4, 5, 6] and partitionIndex = 3`
+
+#### Example Explanation
+
+***Explanation 1:*** ` The rearrangement is valid because every element in [0, 2] index range is less than the pivot element, and every element in [3, 4] index range is greater than the pivot element.`
+
+</details>
+
+---
+
+## 16:  Searching 1: Binary Search on Array
+
+### 16.1 Search for a Range
+
+<details>
+<summary>Sorting - LargestNumber</summary>
+
+#### Problem Description
+
+```
+Given a sorted array of integers A (0-indexed) of size N, find the left most and the right most index of a given integer B in the array A.
+Return an array of size 2, such that 
+          First element = Left most index of B in A
+          Second element = Right most index of B in A.
+If B is not found in A, return [-1, -1].
+Note : Note: The time complexity of your algorithm must be O(log n)..
+```
+
+#### Problem Constraints
+
+- 1 <= N <= 10<sub>6</sub>
+- 1 <= A[i], B <= 10<sub>9</sub>
+
+#### Input Format : 
+```
+The first argument given is the integer array A.
+The second argument given is the integer B.
+```
+
+#### Output Format : 
+```
+Return the left most and right most index (0-based) of B in A as a 2-element array. 
+If B is not found in A, return [-1, -1].
+```
+
+#### Examples :
+
+**Input 1:** `A = [5, 7, 7, 8, 8, 10] B = 8`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `[3, 4]`
+
+**Input 2:** `A = [5, 17, 100, 111] B = 3` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `[-1, -1]`
+
+#### Example Explanation
+
+***Explanation 1:*** 
+```
+ The first occurrence of 8 in A is at index 3.
+ The last occurrence of 8 in A is at index 4.
+ ans = [3, 4]
+```
+
+***Explanation 2:*** `There is no occurrence of 3 in the array.`
+
+</details>
+
+### 15.2 Sorted Insert Position
+
+<details>
+<summary>Sorting - LargestNumber</summary>
+
+#### Problem Description
+
+```
+You are given a sorted array A of size N and a target value B.
+Your task is to find the index (0-based indexing) of the target value in the array.
+If the target value is present, return its index.
+If the target value is not found, return the index of least element greater than equal to B.
+If the target value is not found and least number greater than equal to target is also not present, return the length of array (i.e. the position where target can be placed)
+Your solution should have a time complexity of O(log(N)).
+```
+
+#### Problem Constraints
+
+- 1 <= N <= 10<sub>5</sub>
+- 1 <= A[i] <= 10<sub>5</sub>
+- 1 <= B <= 10<sub>5</sub>
+
+#### Input Format :
+```
+The first argument is an integer array A of size N.
+The second argument is an integer B.
+```
+
+#### Output Format : `Return an integer denoting the index of target value.`
+
+#### Examples :
+
+**Input 1:** `A = [1, 3, 5, 6] B = 5`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `2`
+
+**Input 2:** `A = [1, 4, 9] B = 3` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `1`
+
+#### Example Explanation
+
+***Explanation 1:*** `The target value is present at index 2.`
+
+***Explanation 2:*** `The target value should be inserted at index 1.`
+
+</details>
+
+### 15.5 Find a peak element
+
+<details>
+<summary>Sorting - LargestNumber</summary>
+
+#### Problem Description
+
+```
+Given an array of integers A, find and return the peak element in it.
+An array element is considered a peak if it is not smaller than its neighbors.
+For corner elements, we need to consider only one neighbor.
+NOTE:
+It is guaranteed that the array contains only a single peak element.
+Users are expected to solve this in O(log(N)) time. 
+The array may contain duplicate elements.
+```
+
+#### Problem Constraints
+
+- 1 <= |A| <= 100000 
+- 1 <= A[i] <= 10<sub>9</sub>
+
+#### Input Format : `The only argument given is the integer array A.`
+
+#### Output Format : `Return the peak element.`
+
+#### Examples :
+
+**Input 1:** `A = [1, 2, 3, 4, 5]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `5`
+
+**Input 2:** `A = [5, 17, 100, 11]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `100`
+
+#### Example Explanation
+
+***Explanation 1:*** `5 is the peak.`
+
+***Explanation 2:*** `100 is the peak.`
+
+</details>
+
+### 15.3 Single Element in Sorted Array
+
+<details>
+<summary>Sorting - LargestNumber</summary>
+
+#### Problem Description
+
+```
+Given a sorted array of integers A where every element appears twice except for one element which appears once, find and return this single element that appears only once.
+Elements which are appearing twice are adjacent to each other.
+NOTE: Users are expected to solve this in O(log(N)) time.
+```
+
+#### Problem Constraints
+
+- 1 <= |A| <= 100000
+- 1 <= A[i] <= 10^9
+
+#### Input Format : `The only argument given is the integer array A.`
+
+#### Output Format : `Return the single element that appears only once.`
+
+#### Examples :
+
+**Input 1:** `A = [1, 1, 7]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `7`
+
+**Input 2:** `A = [2, 3, 3]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `2`
+
+#### Example Explanation
+
+***Explanation 1:*** ` 7 appears once`
+
+***Explanation 2:*** ` 2 appears once`
 
 </details>
 

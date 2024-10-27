@@ -10,4 +10,66 @@ package org.DSA.ModularArithmeticAndGCD;
  * Explanation 2: There is only one pair which is divisible by 28 is (17, 11)
  */
 public class PairSumDivisibleByM {
+
+    static int pairSum(int[] arr, int m) {
+        int ans = 0;
+        int[] freqArr = new int[m];
+        for (int i = 0; i < arr.length; i++) {
+            int modValue = arr[i] % m;
+            freqArr[modValue]++;
+        }
+        ans += ((freqArr[0] * (freqArr[0] - 1)) / 2);
+        //when m is even
+        if ((m & 1) == 0) {
+            ans += (freqArr[m / 2] * (freqArr[m / 2] - 1)) / 2;
+        }
+        int i = 1, j = m - 1;
+        while (i < j) {
+            ans += freqArr[i] * freqArr[j];
+            i++;
+            j--;
+        }
+        return ans % 1000000007;
+    }
+
+    static int solve2(int[] a, int k) {
+        int n = a.length;
+        long mod = (long) (1e9 + 7);
+        long cnt[] = new long[k];
+        // cnt[i] stores the count of elements such that their modulo k equals i
+        for (int x : a) cnt[x % k]++;
+        long ans = cnt[0] * (cnt[0] - 1) / 2;
+        for (int i = 1, j = k - 1; i <= j; i++, j--) {
+            if (i == j)
+                ans = (ans + cnt[i] * (cnt[i] - 1) / 2) % mod;
+            else
+                ans = (ans + cnt[i] * cnt[j]) % mod;
+        }
+        return (int) ans;
+    }
+
+    static int solve(int[] A, int m) {
+        int n = A.length;
+        int[] freq = new int[m];
+        int ans = 0;
+        for (int i = 0; i < n; i++) {
+            int val = A[i] % m;
+            int pair;
+            if (val == 0) {
+                pair = 0;
+            } else {
+                pair = m - val;
+            }
+            ans += freq[pair];
+            freq[val]++;
+        }
+        return (ans) % 1000000007;
+    }
+
+    public static void main(String[] args) {
+        int[] A = {1, 2, 3, 4, 5};
+        int B = 2;
+        int result = solve(A, B);
+        System.out.println(result);
+    }
 }

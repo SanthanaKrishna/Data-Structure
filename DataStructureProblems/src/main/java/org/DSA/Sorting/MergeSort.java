@@ -2,6 +2,13 @@ package org.DSA.Sorting;
 
 import java.util.Arrays;
 
+/**
+ *  Merge Sort
+ *  Given an integer array A, sort the array using Merge Sort.
+ *  Input 1:  A = [1, 4, 10, 2, 1, 5]  Output 1: [1, 1, 2, 4, 5, 10]
+ * Input 2: A = [3, 7, 1]  Output 2: [1, 3, 7]
+ * Explanation 1 and 2: Return the sorted array.
+ */
 public class MergeSort {
     static void mergeTwoArray(int[] arr, int left, int mid, int right) {
         int n1 = mid - left + 1; //[l mid]
