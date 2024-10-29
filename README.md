@@ -2656,7 +2656,7 @@ Note: All elements are distinct
 ### 16.1 Search for a Range
 
 <details>
-<summary>Sorting - LargestNumber</summary>
+<summary>Searching - SearchFirstLastOccurrenceRangeK</summary>
 
 #### Problem Description
 
@@ -2705,10 +2705,10 @@ If B is not found in A, return [-1, -1].
 
 </details>
 
-### 15.2 Sorted Insert Position
+### 16.2 Sorted Insert Position
 
 <details>
-<summary>Sorting - LargestNumber</summary>
+<summary>Searching - SearchInsertPosition</summary>
 
 #### Problem Description
 
@@ -2752,7 +2752,7 @@ The second argument is an integer B.
 ### 15.5 Find a peak element
 
 <details>
-<summary>Sorting - LargestNumber</summary>
+<summary>Searching - LargestNumber</summary>
 
 #### Problem Description
 
@@ -2789,10 +2789,10 @@ The array may contain duplicate elements.
 
 </details>
 
-### 15.3 Single Element in Sorted Array
+### 15.3 Single Element in Sorted Array 
 
 <details>
-<summary>Sorting - LargestNumber</summary>
+<summary>Searching - FindUniqueElementFromDuplicate</summary>
 
 #### Problem Description
 
