@@ -15,6 +15,7 @@ public class LocalMinima {
         // Edge case: If there's only one element, it is the local minima
         if (arr.length == 1) return arr[0];
         while (left <= right) {
+            //mid = left + (right - left) / 2  --> this is for larger values
             int middle = (left + right) / 2;
 
             //check if middle element is local minima

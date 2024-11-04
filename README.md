@@ -2641,11 +2641,13 @@ Note: All elements are distinct
 
 #### Examples :
 
-**Input 1:** `A = [6, 2, 0, 4, 5]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `valid  A = [2, 0, 4, 5, 6] and partitionIndex = 3`
+**Input 1:** `A = [6, 2, 0, 4, 5]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:
+** `valid  A = [2, 0, 4, 5, 6] and partitionIndex = 3`
 
 #### Example Explanation
 
-***Explanation 1:*** ` The rearrangement is valid because every element in [0, 2] index range is less than the pivot element, and every element in [3, 4] index range is greater than the pivot element.`
+***Explanation 1:
+*** ` The rearrangement is valid because every element in [0, 2] index range is less than the pivot element, and every element in [3, 4] index range is greater than the pivot element.`
 
 </details>
 
@@ -2674,13 +2676,15 @@ Note : Note: The time complexity of your algorithm must be O(log n)..
 - 1 <= N <= 10<sub>6</sub>
 - 1 <= A[i], B <= 10<sub>9</sub>
 
-#### Input Format : 
+#### Input Format :
+
 ```
 The first argument given is the integer array A.
 The second argument given is the integer B.
 ```
 
-#### Output Format : 
+#### Output Format :
+
 ```
 Return the left most and right most index (0-based) of B in A as a 2-element array. 
 If B is not found in A, return [-1, -1].
@@ -2694,7 +2698,8 @@ If B is not found in A, return [-1, -1].
 
 #### Example Explanation
 
-***Explanation 1:*** 
+***Explanation 1:***
+
 ```
  The first occurrence of 8 in A is at index 3.
  The last occurrence of 8 in A is at index 4.
@@ -2728,6 +2733,7 @@ Your solution should have a time complexity of O(log(N)).
 - 1 <= B <= 10<sub>5</sub>
 
 #### Input Format :
+
 ```
 The first argument is an integer array A of size N.
 The second argument is an integer B.
@@ -2749,7 +2755,7 @@ The second argument is an integer B.
 
 </details>
 
-### 15.5 Find a peak element
+### 16.3 Find a peak element
 
 <details>
 <summary>Searching - LargestNumber</summary>
@@ -2768,7 +2774,7 @@ The array may contain duplicate elements.
 
 #### Problem Constraints
 
-- 1 <= |A| <= 100000 
+- 1 <= |A| <= 100000
 - 1 <= A[i] <= 10<sub>9</sub>
 
 #### Input Format : `The only argument given is the integer array A.`
@@ -2789,7 +2795,7 @@ The array may contain duplicate elements.
 
 </details>
 
-### 15.3 Single Element in Sorted Array 
+### 16.4 Single Element in Sorted Array
 
 <details>
 <summary>Searching - FindUniqueElementFromDuplicate</summary>
@@ -2822,6 +2828,244 @@ NOTE: Users are expected to solve this in O(log(N)) time.
 ***Explanation 1:*** ` 7 appears once`
 
 ***Explanation 2:*** ` 2 appears once`
+
+</details>
+
+### 16.5 Rotated Sorted Array Search
+
+<details>
+<summary>Searching - RotatedArraySortedSearchK</summary>
+
+#### Problem Description
+
+```
+Given a sorted array of integers A of size N and an integer B, 
+where array A is rotated at some pivot unknown beforehand.
+For example, the array [0, 1, 2, 4, 5, 6, 7] might become [4, 5, 6, 7, 0, 1, 2].
+Your task is to search for the target value B in the array. If found, return its index; otherwise, return -1.
+You can assume that no duplicates exist in the array.
+NOTE: You are expected to solve this problem with a time complexity of O(log(N))
+```
+
+#### Problem Constraints
+
+- 1 <= N <= 1000000
+- 1 <= A[i] <= 10<sub>9</sub>
+- All elements in A are Distinct.
+
+#### Input Format :
+
+```
+The First argument given is the integer array A.
+The Second argument given is the integer B.
+```
+
+#### Output Format : `Return index of B in array A, otherwise return -1`
+
+#### Examples :
+
+**Input 1:** `A = [4, 5, 6, 7, 0, 1, 2, 3] B = 4`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `0`
+
+**Input 2:** `A = [ 9, 10, 3, 5, 6, 8 ] B = 5` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `3`
+
+#### Example Explanation
+
+***Explanation 1:*** `Target 4 is found at index 0 in A.`
+
+***Explanation 2:*** `Target 5 is found at index 3 in A.`
+
+</details>
+
+### 16.6 Square Root of Integer
+
+<details>
+<summary>Searching - FindFloorSqrtN</summary>
+
+#### Problem Description
+
+```
+Given an integer A. Compute and return the square root of A.
+If A is not a perfect square, return floor(sqrt(A)).
+NOTE: 
+   The value of A*A can cross the range of Integer.
+   Do not use the sqrt function from the standard library. 
+   Users are expected to solve this in O(log(A)) time.
+```
+
+#### Problem Constraints
+
+- 0 <= A <= 10<sub>9</sub>
+
+#### Input Format : `The first and only argument given is the integer A.`
+
+#### Output Format : `Return floor(sqrt(A))`
+
+#### Examples :
+
+**Input 1:** `A = 11`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `3`
+
+**Input 2:** `A = 9` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `3`
+
+#### Example Explanation
+
+***Explanation 1:
+*** `When A = 11 , square root of A = 3.316. It is not a perfect square so we return the floor which is 3.`
+
+***Explanation 2:*** `When A = 9 which is a perfect square of 3, so we return 3.`
+
+</details>
+
+### 16.7 Median of two sorted arrays
+
+<details>
+<summary>Searching - MedianTwoSorted</summary>
+
+#### Problem Description
+
+```
+Given two sorted arrays A and B of size M and N respectively, return the median of the two sorted arrays.
+Round of the value to the floor integer [2.6=2, 2.2=2]
+```
+
+#### Problem Constraints
+
+- 0 <= M <= 10<sub>5</sub>
+- 0 <= N <= 10<sub>5</sub>
+- -10<sub>9</sub> <= A[i], B[i] <= 10<sub>9</sub>
+
+#### Input Format :
+
+```
+First argument A is an array of integers.
+First argument B is an array of integers.
+```
+
+#### Output Format : `Return an integer.`
+
+#### Examples :
+
+**Input 1:** `A = [1, 3] B=[2]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `3`
+
+**Input 2:** `A = [1, 2] B=[3,4]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `3`
+
+#### Example Explanation
+
+***Explanation 1:*** `merged array = [1,2,3] and median is 2.`
+
+***Explanation 2:*** `merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2`
+
+</details>
+
+### 16.8 Aggressive cows
+
+<details>
+<summary>Searching - AggressiveCows</summary>
+
+#### Problem Description
+
+```
+Farmer John has built a new long barn with N stalls.
+Given an array of integers A of size N where each element of the array represents the location of the stall and an integer B which represents the number of cows.
+
+His cows don't like this barn layout and become aggressive towards each other once put into a stall. 
+To prevent the cows from hurting each other, John wants to assign the cows to the stalls, such that the minimum distance between any two of them is as large as possible.
+What is the largest minimum distance?
+```
+
+#### Problem Constraints
+
+- 2 <= N <= 100000
+- 0 <= A[i] <= 10<sub>9</sub>
+- 2 <= B <= N
+
+#### Input Format :
+
+```
+The first argument given is the integer array A.
+The second argument given is the integer B.
+```
+
+#### Output Format : `Return the largest minimum distance possible among the cows.`
+
+#### Examples :
+
+**Input 1:** `A = [1, 2, 3, 4, 5]  B=3`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `2`
+
+**Input 2:** `A = [1, 2]  B=2` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `1`
+
+#### Example Explanation
+
+***Explanation 1:***
+
+```
+John can assign the stalls at location 1, 3 and 5 to the 3 cows respectively. 
+So the minimum distance will be 2.
+```
+
+***Explanation 2:*** `The minimum distance will be 1.`
+
+</details>
+
+### 16.9 Painter's Partition Problem
+
+<details>
+<summary>Searching - PainterPartition</summary>
+
+#### Problem Description
+
+```
+Given 2 integers A and B and an array of integers C of size N. Element C[i] represents the length of ith board.
+You have to paint all N boards [C0, C1, C2, C3 … CN-1]. There are A painters available and each of them takes B units of time to paint 1 unit of the board.
+
+Calculate and return the minimum time required to paint all boards under the constraints that any painter will only paint contiguous sections of the board.
+NOTE:
+1. 2 painters cannot share a board to paint. That is to say, a board cannot be painted partially by one painter, and partially by another.
+2. A painter will only paint contiguous boards. This means a configuration where painter 1 paints boards 1 and 3 but not 2 is invalid.
+
+Return the ans % 10000003.
+```
+
+#### Problem Constraints
+
+- 1 <= A <= 1000
+- 1 <= B <= 10<sub>6</sub>
+- 1 <= N <= 10<sub>5</sub>
+- 1 <= C[i] <= 10<sub>6</sub>
+
+#### Input Format :
+
+```
+The first argument given is the integer A.
+The second argument given is the integer B.
+The third argument given is the integer array C.
+```
+
+#### Output Format : `Return minimum time required to paint all boards under the constraints that any painter will only paint contiguous sections of board % 10000003.`
+
+#### Examples :
+
+**Input 1:** `A = 2  B=5 C=[1, 10]`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `50`
+
+**Input 2:** `A = 10  B=1  c=[1, 8, 11, 3]` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `11`
+
+#### Example Explanation
+
+***Explanation 1:***
+
+```
+Possibility 1:- One painter paints both blocks, time taken = 55 units.
+Possibility 2:- Painter 1 paints block 1, painter 2 paints block 2, time take = max(5, 50) = 50
+There are no other distinct ways to paint boards.
+ans = 50 % 10000003
+```
+
+***Explanation 2:***
+
+```
+Each block is painted by a painter so, Painter 1 paints block 1, painter 2 paints block 2, painter 3 paints block 3 
+and painter 4 paints block 4, time taken = max(1, 8, 11, 3) = 11
+ans = 11 % 10000003
+```
 
 </details>
 

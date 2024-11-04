@@ -17,6 +17,7 @@ public class FindUniqueElementFromDuplicate {
         int n = arr.length;
         int left = 0, right = n - 1;
         while (left <= right) {
+            //mid = left + (right - left) / 2  --> this is for larger values
             int middle = (left + right) / 2;
             if ((middle == 0 || (arr[middle - 1] != arr[middle])) && (middle == n - 1 || (arr[middle] != arr[middle + 1]))) {
                 return arr[middle];

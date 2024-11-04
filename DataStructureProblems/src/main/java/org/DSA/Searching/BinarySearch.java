@@ -11,6 +11,7 @@ public class BinarySearch {
     static int findElement(int[] arr, int K) {
         int left = 0, right = arr.length - 1;
         while (left <= right) {
+            //mid = left + (right - left) / 2  --> this is for larger values
             int middle = (left + right) / 2;  //middle formula = (a+b)/2
             if (arr[middle] == K) {
                 return middle;
