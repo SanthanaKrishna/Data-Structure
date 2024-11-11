@@ -3070,3 +3070,75 @@ ans = 11 % 10000003
 </details>
 
 ---
+
+## 17:  Linked List
+
+### 17.1 Print Linked List
+
+<details>
+<summary>LinkedList - PrintLinkedList</summary>
+
+#### Problem Description
+
+```
+You are given A which is the head of a linked list. 
+Print the linked list in space separated manner.
+Note : The last node value must also be succeeded by a space and after printing the entire list you should print a new line
+```
+
+#### Problem Constraints
+
+- 1 <= size of linked list <= 10<sub>5</sub>
+- 1 <= value of nodes <= 10<sub>9</sub>
+
+#### Input Format : `The first argument A is the head of a linked list.`
+
+#### Output Format : `You dont need to return anything`
+
+#### Examples :
+
+**Input 1:** `A = 1 -> 2 -> 3`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `1 2 3`
+
+**Input 2:** `A = 4 -> 3 -> 2 -> 1` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `4 3 2 1`
+
+#### Example Explanation
+
+***Explanation 1:*** `We print the given linked list`
+
+</details>
+
+### 17.2 Print Linked List
+
+<details>
+<summary>LinkedList - PrintLinkedList</summary>
+
+#### Problem Description
+
+```
+You are given A which is the head of a linked list. 
+Print the linked list in space separated manner.
+Note : The last node value must also be succeeded by a space and after printing the entire list you should print a new line
+```
+
+#### Problem Constraints
+
+- 1 <= size of linked list <= 10<sub>5</sub>
+- 1 <= value of nodes <= 10<sub>9</sub>
+
+#### Input Format : `The first argument A is the head of a linked list.`
+
+#### Output Format : `You dont need to return anything`
+
+#### Examples :
+
+**Input 1:** `A = 1 -> 2 -> 3`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 1:** `1 2 3`
+
+**Input 2:** `A = 4 -> 3 -> 2 -> 1` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Output 2:** `4 3 2 1`
+
+#### Example Explanation
+
+***Explanation 1:*** `We print the given linked list`
+
+***Explanation 2:*** `There is no occurrence of 3 in the array.`
+
+</details>
