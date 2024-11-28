@@ -15,7 +15,7 @@ class ListNode {
     }
 }
 
-public class PrintLinkedList {
+public class CreateAndPrintLinkedList {
     static void printList(ListNode A) {
         ListNode current = A;
         while (current != null) {

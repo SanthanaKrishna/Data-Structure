@@ -11,18 +11,16 @@ public class SearchElementK {
     }
 
     public static void main(String[] args) {
-        LinkedListNode head = new LinkedListNode(1);
-        head.next = new LinkedListNode(2);
-        head.next.next = new LinkedListNode(3);
-        head.next.next.next = new LinkedListNode(4);
-        head.next.next.next.next = new LinkedListNode(5);
-        head.next.next.next.next.next = new LinkedListNode(6);
-        head.next.next.next.next.next.next = new LinkedListNode(7);
-        head.next.next.next.next.next.next.next = new LinkedListNode(8);
-        head.next.next.next.next.next.next.next.next = new LinkedListNode(9);
-        head.next.next.next.next.next.next.next.next.next = new LinkedListNode(10);
+        int[] values = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        // Using createLinkedList method to create the linked list
+        LinkedListNode head = LinkedListUtils.createLinkedList(values);
+
+        System.out.print("Linked list: ");
+        LinkedListUtils.printLinkedList(head);  // Calling printLinkedList from LinkedListUtil
+
+        // Searching for elements
         boolean result = findValue(head, 5);
-        System.out.println(result);
-        System.out.println(findValue(head, 11));
+        System.out.println("Element 5 found: " + result);
+        System.out.println("Element 11 found: " + findValue(head, 11));
     }
 }
