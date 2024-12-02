@@ -1,12 +1,12 @@
 package org.DSA.Trees;
 
-// Node class represents each node in the binary tree
-public class Node {
+// TreeNode class represents each node in the binary tree
+public class TreeNode {
     int value;
-    Node left, right;
+    TreeNode left, right;
 
     // Constructor to create a new node
-    public Node(int value) {
+    public TreeNode(int value) {
         this.value = value;
         this.left = null;
         this.right = null;

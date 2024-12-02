@@ -2,16 +2,16 @@ package org.DSA.Trees;
 
 public class BinarySearchTreeUtils {
 
-    Node root; // Root of the binary tree
+    TreeNode root; // Root of the binary tree
 
     public BinarySearchTreeUtils() {
         root = null;
     }
 
     // Insert a new node into the binary Search tree
-    public Node insert(Node root, int value) {
+    public TreeNode insert(TreeNode root, int value) {
         if (root == null) {  // If the tree is empty, return a new node
-            root = new Node(value);
+            root = new TreeNode(value);
             return root;
         }
 
@@ -25,7 +25,7 @@ public class BinarySearchTreeUtils {
     }
 
     // Search for a node with the given value in the BST
-    public static boolean search(Node root, int value) {
+    public static boolean search(TreeNode root, int value) {
         if (root == null) return false; // Base case: root is null, value not found
 
         if (root.value == value) {
@@ -38,7 +38,7 @@ public class BinarySearchTreeUtils {
     }
 
     // Find the minimum value node in the BST
-    public static Node findMin(Node root) {
+    public static TreeNode findMin(TreeNode root) {
         if (root == null || root.left == null) {
             return root; // If the left child is null, the current node is the minimum
         }
@@ -46,7 +46,7 @@ public class BinarySearchTreeUtils {
     }
 
     // Find the maximum value node in the BST
-    public static Node findMax(Node root) {
+    public static TreeNode findMax(TreeNode root) {
         if (root == null || root.right == null) {
             return root;  // If the right child is null, the current node is the maximum
         }
@@ -54,7 +54,7 @@ public class BinarySearchTreeUtils {
     }
 
     // Delete a node with a given value from the BST
-    public static Node delete(Node root, int value) {
+    public static TreeNode delete(TreeNode root, int value) {
         if (root == null) return root; // Base case: if the tree is empty
 
         if (value < root.value) {
@@ -62,22 +62,22 @@ public class BinarySearchTreeUtils {
         } else if (value > root.value) {
             root.right = delete(root.right, value); // Go to the right subtree
         } else {
-            // Node with the value found, now handle the deletion
+            // TreeNode with the value found, now handle the deletion
 
-            // Case 1: Node has no children (leaf node)
+            // Case 1: TreeNode has no children (leaf node)
             if (root.left == null && root.right == null) {
                 return null;
             }
 
-            // Case 2: Node has one child
+            // Case 2: TreeNode has one child
             if (root.left == null) {
                 return root.right;
             } else if (root.right == null) {
                 return root.left;
             }
 
-            // Case 3: Node has two children, get the inorder successor (smallest in the right subtree)
-            Node minNode = findMin(root.right); // Find the minimum node in the right subtree
+            // Case 3: TreeNode has two children, get the inorder successor (smallest in the right subtree)
+            TreeNode minNode = findMin(root.right); // Find the minimum node in the right subtree
             root.value = minNode.value; // Replace root's value with the inorder successor's value
             root.right = delete(root.right, minNode.value); // Delete the inorder successor node
         }
@@ -86,7 +86,7 @@ public class BinarySearchTreeUtils {
     }
 
     // Get the height of the tree
-    public static int height(Node root) {
+    public static int height(TreeNode root) {
         if (root == null) {
             return 0; // Base case: height of empty tree is 0
         }
@@ -94,12 +94,12 @@ public class BinarySearchTreeUtils {
         return 1 + Math.max(height(root.left), height(root.right));
     }
 
-    public int size(Node root) { // Method to find the size of the binary tree (i.e., number of nodes)
+    public int size(TreeNode root) { // Method to find the size of the binary tree (i.e., number of nodes)
         if (root == null) return 0; // If the node is null, return 0
         return 1 + size(root.left) + size(root.right); // Recur to left and right subtrees and sum up the result
     }
 
-    public void preOrderTraversal(Node root) {  // Pre-order traversal (Root, Left, Right)
+    public void preOrderTraversal(TreeNode root) {  // Pre-order traversal (Root, Left, Right)
         if (root != null) {
             System.out.print(root.value + " "); // Print node value
             preOrderTraversal(root.left);  // Traverse left subtree
@@ -107,7 +107,7 @@ public class BinarySearchTreeUtils {
         }
     }
 
-    public void inOrderTraversal(Node root) {  // In-order traversal (Left, Root, Right)
+    public void inOrderTraversal(TreeNode root) {  // In-order traversal (Left, Root, Right)
         if (root != null) {
             inOrderTraversal(root.left);  // Traverse left subtree
             System.out.print(root.value + " "); // Print node value
@@ -115,7 +115,7 @@ public class BinarySearchTreeUtils {
         }
     }
 
-    public void postOrderTraversal(Node root) {
+    public void postOrderTraversal(TreeNode root) {
         if (root != null) {
             preOrderTraversal(root.left); // Traverse left subtree
             preOrderTraversal(root.right); // Traverse right subtree

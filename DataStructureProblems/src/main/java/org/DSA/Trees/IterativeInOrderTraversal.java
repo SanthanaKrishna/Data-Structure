@@ -5,13 +5,13 @@ import java.util.Stack;
 public class IterativeInOrderTraversal {
 
     // Method to perform iterative in-order traversal
-    public static void inOrderTraversal(Node root) {
+    public static void inOrderTraversal(TreeNode root) {
         if (root == null) {
             return; //if tree is empty, return
         }
 
-        Stack<Node> stack = new Stack<>();
-        Node current = root;
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode current = root;
 
         //Traverse the tree
         while (current != null || !stack.isEmpty()) {
@@ -30,13 +30,13 @@ public class IterativeInOrderTraversal {
     }
 
     public static void main(String[] args) {
-        Node root = new Node(1);
-        root.left = new Node(2);
-        root.right = new Node(3);
-        root.left.left = new Node(4);
-        root.left.right = new Node(5);
-        root.right.left = new Node(6);
-        root.right.right = new Node(7);
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(5);
+        root.right.left = new TreeNode(6);
+        root.right.right = new TreeNode(7);
 
         System.out.println("In-order Traversal (Iterative):");
         inOrderTraversal(root); // Output: 4 2 5 1 6 3 7
