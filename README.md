@@ -1,4 +1,5 @@
 # Data-Structure
+### Slinding Window Formula: N-K+1
 
 ## 1. Basic Problems Solving
 
