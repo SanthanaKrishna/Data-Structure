@@ -5,7 +5,7 @@ package org.DSA.Trees;
  * Given the root of a binary tree, return true if the tree can be split into two non-empty subtrees with equal sums, or false otherwise.
  */
 public class EqualTreePartition {
-    private static boolean canPartition = false;
+    private static boolean canPartition = false; // Global flag to track partition status
 
     public static boolean checkEqualTreePartition(TreeNode root) {
         int totalSum = calcTreeSum(root); // Calculate the total sum of the tree
@@ -24,14 +24,15 @@ public class EqualTreePartition {
         return root.value + calcTreeSum(root.left) + calcTreeSum(root.right);
     }
 
-    public static int findSubTreeSum(TreeNode node, int totalSum, TreeNode root) { //Recursively calculates the sum of each subtree
+    public static int findSubTreeSum(TreeNode node, int targetSum, TreeNode root) { // Recursively calculates the sum of each subtree and checks for a valid partition
         if (node == null) return 0;
 
-        int leftSubTreeSum = findSubTreeSum(node.left, totalSum, root);
-        int rightSubTreeSum = findSubTreeSum(node.right, totalSum, root);
-        int subTreeSum = node.value + leftSubTreeSum + rightSubTreeSum;// Calculate the sum of the current subtree
+        int leftSubTreeSum = findSubTreeSum(node.left, targetSum, root);
+        int rightSubTreeSum = findSubTreeSum(node.right, targetSum, root);
 
-        if (subTreeSum == totalSum && node != root) { //Checks if any subtree's sum equals half of the total sum while ensuring it's not the entire tree
+        int subTreeSum = node.value + leftSubTreeSum + rightSubTreeSum; // Calculate the sum of the current subtree
+
+        if (subTreeSum == targetSum && node != root) { // Check if this subtree's sum equals the target sum, ensuring it's not the entire tree
             canPartition = true;
         }
 

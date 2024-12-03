@@ -1,5 +1,6 @@
 # Data-Structure
-### Slinding Window Formula: N-K+1
+### Slinding Window Formula: N-K+1`
+`Stack will help when we need go to depth`
 
 ## 1. Basic Problems Solving
 
