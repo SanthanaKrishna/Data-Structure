@@ -2,6 +2,9 @@ package org.DSA.Trees;
 
 import java.util.Stack;
 
+/**
+ * Iterative In-Order Traversal
+ */
 public class IterativeInOrderTraversal {
 
     // Method to perform iterative in-order traversal
