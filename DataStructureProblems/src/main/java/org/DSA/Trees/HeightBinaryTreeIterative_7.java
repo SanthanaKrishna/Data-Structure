@@ -6,7 +6,7 @@ import java.util.Queue;
 /**
  * Height of Binary Tree using Iterative Implementation
  */
-public class HeightBinaryTreeIterative {
+public class HeightBinaryTreeIterative_7 {
 
     public static int heightBinaryTree(TreeNode root) {
         if (root == null) return 0; // Return 0 for edge-based height (or 0 for level-based height)

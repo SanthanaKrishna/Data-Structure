@@ -6,7 +6,7 @@ import java.util.Queue;
 /**
  * Find left view of binary tree
  */
-public class LeftViewBinaryTree {
+public class LeftViewBinaryTree_5 {
 
     public static void printLeftView(TreeNode root) {
         if (root == null) {
