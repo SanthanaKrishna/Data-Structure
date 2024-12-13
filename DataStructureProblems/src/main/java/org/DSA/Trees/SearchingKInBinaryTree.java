@@ -1,5 +1,5 @@
 package org.DSA.Trees;
-
+//Definition of search :A tree where for a node x, everything on the left has data <= x and on the right > x.
 public class SearchingKInBinaryTree {
     //Search for an element K in the BST (Recursive Approach).
     public boolean searchBinaryRecursive(TreeNode root, int K) {

@@ -1,6 +1,6 @@
 package org.DSA.Trees;
 
-public class BinarySearchTreeInsertion {
+public class InsertionBST {
 
     // Insert a value into the BST (Recursive Approach).
     public TreeNode insertRecursive(TreeNode root, int value) {
@@ -31,7 +31,7 @@ public class BinarySearchTreeInsertion {
                 current = current.left; // Move to the left subtree
             } else if (value > current.value) {
                 current = current.right; // Move to the right subtree
-            } else {
+            } else { // this will not allow duplicate
                 return root; // If the value already exists, return the original root
             }
         }

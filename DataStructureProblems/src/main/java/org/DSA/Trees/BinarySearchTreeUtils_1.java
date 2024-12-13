@@ -96,7 +96,7 @@ public class BinarySearchTreeUtils_1 {
 
 
     public static void main(String[] args) {
-        BinarySearchTreeInsertion insert = new BinarySearchTreeInsertion();
+        InsertionBST insert = new InsertionBST();
         InOrderTraversalBST inOrderTraversal = new InOrderTraversalBST();
 
         TreeNode root = null;

@@ -2,7 +2,7 @@ package org.DSA.Trees;
 
 public class BinaryTreeMain {
     public static void main(String[] args) {
-        BinarySearchTreeInsertion bstInsert = new BinarySearchTreeInsertion();
+        InsertionBST bstInsert = new InsertionBST();
         SearchingKInBinaryTree bstSearch = new SearchingKInBinaryTree();
         TreeNode root = null;
 
