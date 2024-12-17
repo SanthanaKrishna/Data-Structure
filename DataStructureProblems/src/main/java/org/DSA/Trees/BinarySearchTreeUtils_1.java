@@ -71,29 +71,6 @@ public class BinarySearchTreeUtils_1 {
         return root.value;
     }
 
-    // Delete a node with a given value from the BST
-    public static TreeNode delete(TreeNode root, int value) {
-        if (root == null) return null; // Base case: if the tree is empty
-
-        if (value < root.value) {
-            root.left = delete(root.left, value);  // Delete from the left subtree
-        } else if (value > root.value) {
-            root.right = delete(root.right, value); // Go to the right subtree
-        } else {
-            // Node to be deleted found
-            if (root.left == null) {
-                return root.right; // Replace with right child if left is null
-            } else if (root.right == null) {
-                return root.left; // Replace with left child if right is null
-            }
-
-            // Node with two children: Get the inorder successor
-            root.value = findMin(root.right);
-            root.right = delete(root.right, root.value); // Delete the inorder successor
-        }
-        return root;
-    }
-
 
     public static void main(String[] args) {
         InsertionBST insert = new InsertionBST();
@@ -115,12 +92,5 @@ public class BinarySearchTreeUtils_1 {
         System.out.println("Max value: " + findMax(root));
         System.out.println("Height of the tree: " + getHeight(root));
         System.out.println("Is valid BST: " + isValidBST(root));
-
-
-        // Delete a node
-        root = delete(root, 7);
-        System.out.print("In-order Traversal after deleting 7: ");
-        inOrderTraversal.inOrderIterative(root);
-        System.out.println();
     }
 }
