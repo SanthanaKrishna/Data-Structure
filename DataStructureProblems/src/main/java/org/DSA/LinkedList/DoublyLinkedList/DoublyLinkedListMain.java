@@ -15,34 +15,24 @@ public class DoublyLinkedListMain {
         dll.addNodeToBeginning(5);
         dll.displayList(); // Output: 5 10 20 30 40
 
+        System.out.println("\nSearching for node with value 20:");
+        System.out.println(dll.searchNode(20) ? "Node found." : "Node not found."); // Should output: Node found.
+
+        System.out.println("\nSearching for node with value 50:");
+        System.out.println(dll.searchNode(50) ? "Node found." : "Node not found."); // Should output: Node not found.
+
         System.out.println("\nInserting a node with value 25 at position 3:");
         dll.insertNodeAtPosition(3, 25);
         dll.displayList(); // Output: 5 10 25 20 30 40
+
+        System.out.println("\nSearching for node with value 25:");
+        System.out.println(dll.searchNode(25) ? "Node found." : "Node not found."); // Should output: Node found.
 
         System.out.println("\nInserting a node with value 15 before node with value 20:");
         dll.insertBeforeNode(20, 15);
         dll.displayList(); // Output: 5 10 25 15 20 30 40
 
-        System.out.println("\nInserting a node with value 35 after node with value 30:");
-        dll.insertAfterNode(30, 35);
-        dll.displayList(); // Output: 5 10 25 15 20 30 35 40
-
-        System.out.println("\nDeleting a node with value 25:");
-        dll.deleteNode(25);
-        dll.displayList(); // Output: 5 10 15 20 30 35 40
-
-        System.out.println("\nDeleting the first node:");
-        dll.deleteNodeFromBeginning();
-        dll.displayList(); // Output: 10 15 20 30 35 40
-
-        System.out.println("\nDeleting the last node:");
-        dll.deleteNodeFromEnd();
-        dll.displayList(); // Output: 10 15 20 30 35
-
-        System.out.println("\nSearching for node with value 20:");
-        System.out.println(dll.searchNode(20) ? "Node found." : "Node not found."); // Output: Node found.
-
-        System.out.println("\nDisplaying the list in reverse:");
-        dll.displayListReverse(); // Output: 35 30 20 15 10
+        System.out.println("\nSearching for node with value 15:");
+        System.out.println(dll.searchNode(15) ? "Node found." : "Node not found."); // Should output: Node found.
     }
 }

@@ -154,7 +154,7 @@ public class DoublyLinkedList {
         }
     }
 
-    // **Delete a node with a specific value**
+    // Delete a node with a specific value
     public void deleteNode(int value) {
         if (head == null) { // List is empty
             System.out.println("The list is empty, nothing to delete.");
@@ -182,22 +182,26 @@ public class DoublyLinkedList {
         // If the node to be deleted is in the middle
         current.prev.next = current.next;
         current.next.prev = current.prev;
-        System.out.println("Node with value " + value + " has been deleted.");
     }
 
     // Search for a node with a given value
     public boolean searchNode(int value) {
         DoublyNode current = head;
+        System.out.print("Searching for " + value + " in the list: ");
         while (current != null) {
+            System.out.print(current.data + " "); // Debugging to show traversal
             if (current.data == value) {
+                System.out.println("\nFound node with value " + value);
                 return true;
             }
             current = current.next;
         }
+        System.out.println("\nNode with value " + value + " not found.");
         return false;
     }
 
-    //Display the list in forward direction
+
+    // Display the list in forward direction
     public void displayList() {
         DoublyNode current = head;
         while (current != null) {
@@ -210,11 +214,10 @@ public class DoublyLinkedList {
     // Display the list in reverse order
     public void displayListReverse() {
         DoublyNode current = tail;
-        while (current.next != null) {
+        while (current != null) {
             System.out.print(current.data + " ");
             current = current.prev;
         }
         System.out.println();
     }
-
 }
