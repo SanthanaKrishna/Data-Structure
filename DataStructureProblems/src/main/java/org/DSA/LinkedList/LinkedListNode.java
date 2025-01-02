@@ -1,11 +1,11 @@
 package org.DSA.LinkedList;
 
 public class LinkedListNode {
-    int val;
+    int data;
     LinkedListNode next;
 
     LinkedListNode(int x) {
-        val = x;
+        data = x;
         next = null;
     }
 }

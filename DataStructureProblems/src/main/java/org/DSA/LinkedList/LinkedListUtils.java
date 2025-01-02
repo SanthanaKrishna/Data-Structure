@@ -5,15 +5,16 @@ import java.security.PublicKey;
 public class LinkedListUtils {
 
     // Method to create a linked list from an array of integers
-    public static LinkedListNode createLinkedList(int[] values) {
-        if (values == null || values.length == 0) {
+    public static LinkedListNode createLinkedList(int[] arr) {
+        if (arr == null || arr.length == 0) {
             return null;
         }
 
-        LinkedListNode head = new LinkedListNode(values[0]);
+        LinkedListNode head = new LinkedListNode(arr[0]);
         LinkedListNode current = head;
-        for (int i = 1; i < values.length; i++) {
-            current.next = new LinkedListNode(values[i]);
+
+        for (int i = 1; i < arr.length; i++) {
+            current.next = new LinkedListNode(arr[i]);
             current = current.next;
         }
         return head;
@@ -23,7 +24,7 @@ public class LinkedListUtils {
     public static void printLinkedList(LinkedListNode head) {
         LinkedListNode current = head;
         while (current != null) {
-            System.out.print(current.val + " ");
+            System.out.print(current.data + " ");
             current = current.next;
         }
         System.out.println();
@@ -77,12 +78,12 @@ public class LinkedListUtils {
 
     public static LinkedListNode deleteElement(LinkedListNode head, int value) {
         if (head == null) return null;
-        if (head.val == value) {
+        if (head.data == value) {
             return head.next;
         }
         LinkedListNode current = head;
         while (current.next != null) {
-            if (current.next.val == value) {
+            if (current.next.data == value) {
                 current.next = current.next.next;
                 return head;
             }

@@ -4,16 +4,16 @@ public class SearchElementK {
     static boolean findValue(LinkedListNode head, int K) {
         LinkedListNode current = head;
         while (current != null) {
-            if (current.val == K) return true;
+            if (current.data == K) return true;
             current = current.next;
         }
         return false;
     }
 
     public static void main(String[] args) {
-        int[] values = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         // Using createLinkedList method to create the linked list
-        LinkedListNode head = LinkedListUtils.createLinkedList(values);
+        LinkedListNode head = LinkedListUtils.createLinkedList(arr);
 
         System.out.print("Linked list: ");
         LinkedListUtils.printLinkedList(head);  // Calling printLinkedList from LinkedListUtil
