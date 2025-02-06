@@ -5,7 +5,7 @@ import java.util.HashMap;
 /**
  * construct the binary tree from in-order and pre-order, given two arrays in[] and pre[]
  */
-public class ConstructBinaryTreeInPreOrder_9 {
+public class ConstructBinaryTreeInPreOrder {
     public static TreeNode buildTree(int[] preOrder, int[] inOrder) {// Helper method to build the binary tree
         if (preOrder == null || inOrder == null || preOrder.length != inOrder.length) {
             return null;

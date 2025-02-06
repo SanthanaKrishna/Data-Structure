@@ -1,6 +1,6 @@
 package org.DSA.Trees;
 
-public class BinarySearchTreeUtils_1 {
+public class BinarySearchTreeUtils {
     // Get the height of the tree
     public static int getHeight(TreeNode root) {
         if (root == null) {

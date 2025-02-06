@@ -2,7 +2,7 @@ package org.DSA.Trees;
 /**
  * Height of Binary Tree using Recursive Implementation
  */
-public class HeightBinaryTreeRecursion_6 {
+public class HeightBinaryTreeRecursion {
 
     // Method to calculate the height of a binary tree
     public static int heightBinaryTree(TreeNode root) {

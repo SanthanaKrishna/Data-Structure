@@ -4,7 +4,7 @@ package org.DSA.Trees;
  * ---Equal Tree Partition---
  * Given the root of a binary tree, return true if the tree can be split into two non-empty subtrees with equal sums, or false otherwise.
  */
-public class EqualTreePartition_3 {
+public class EqualTreePartition {
     private static boolean canPartition = false; // Global flag to track partition status
 
     public static boolean checkEqualTreePartition(TreeNode root) {

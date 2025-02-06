@@ -8,7 +8,7 @@ import java.util.Queue;
 /**
  * Level Order Traversal
  */
-public class LevelOrderTraversal_4 {
+public class LevelOrderTraversal {
     // Method to perform Level Order Traversal
     public static List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>(); // To store the level order traversal

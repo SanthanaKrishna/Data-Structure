@@ -1,6 +1,6 @@
 package org.DSA.Trees;
 
-public class BalancedBinaryTree_8 {
+public class BalancedBinaryTree {
 
     public static boolean isBalanced(TreeNode root) {// Method to check if the tree is balanced
         return checkHeight(root) != -1;
